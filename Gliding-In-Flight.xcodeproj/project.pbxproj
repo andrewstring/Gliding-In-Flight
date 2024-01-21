@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */; };
+		499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658802B5DA75200ACCAF7 /* Persistence.swift */; };
+		499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */; };
+		499658862B5DA75200ACCAF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658852B5DA75200ACCAF7 /* ContentView.swift */; };
+		499658882B5DA75600ACCAF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499658872B5DA75600ACCAF7 /* Assets.xcassets */; };
+		4996588C2B5DA75600ACCAF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4996588B2B5DA75600ACCAF7 /* Preview Assets.xcassets */; };
+		499658962B5DA75700ACCAF7 /* Gliding_In_FlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658952B5DA75700ACCAF7 /* Gliding_In_FlightTests.swift */; };
+		499658A02B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996589F2B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift */; };
+		499658A22B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		499658922B5DA75700ACCAF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 499658732B5DA75200ACCAF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4996587A2B5DA75200ACCAF7;
+			remoteInfo = "Gliding-In-Flight";
+		};
+		4996589C2B5DA75700ACCAF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 499658732B5DA75200ACCAF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4996587A2B5DA75200ACCAF7;
+			remoteInfo = "Gliding-In-Flight";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gliding-In-Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightApp.swift; sourceTree = "<group>"; };
+		499658802B5DA75200ACCAF7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		499658832B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gliding_In_Flight.xcdatamodel; sourceTree = "<group>"; };
+		499658852B5DA75200ACCAF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		499658872B5DA75600ACCAF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		499658892B5DA75600ACCAF7 /* Gliding_In_Flight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gliding_In_Flight.entitlements; sourceTree = "<group>"; };
+		4996588B2B5DA75600ACCAF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		499658912B5DA75700ACCAF7 /* Gliding-In-FlightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gliding-In-FlightTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		499658952B5DA75700ACCAF7 /* Gliding_In_FlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightTests.swift; sourceTree = "<group>"; };
+		4996589B2B5DA75700ACCAF7 /* Gliding-In-FlightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gliding-In-FlightUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4996589F2B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightUITests.swift; sourceTree = "<group>"; };
+		499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		499658782B5DA75200ACCAF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4996588E2B5DA75700ACCAF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499658982B5DA75700ACCAF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		499658722B5DA75200ACCAF7 = {
+			isa = PBXGroup;
+			children = (
+				4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */,
+				499658942B5DA75700ACCAF7 /* Gliding-In-FlightTests */,
+				4996589E2B5DA75700ACCAF7 /* Gliding-In-FlightUITests */,
+				4996587C2B5DA75200ACCAF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4996587C2B5DA75200ACCAF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */,
+				499658912B5DA75700ACCAF7 /* Gliding-In-FlightTests.xctest */,
+				4996589B2B5DA75700ACCAF7 /* Gliding-In-FlightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
+			isa = PBXGroup;
+			children = (
+				4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */,
+				499658802B5DA75200ACCAF7 /* Persistence.swift */,
+				499658852B5DA75200ACCAF7 /* ContentView.swift */,
+				499658872B5DA75600ACCAF7 /* Assets.xcassets */,
+				499658892B5DA75600ACCAF7 /* Gliding_In_Flight.entitlements */,
+				499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */,
+				4996588A2B5DA75600ACCAF7 /* Preview Content */,
+			);
+			path = "Gliding-In-Flight";
+			sourceTree = "<group>";
+		};
+		4996588A2B5DA75600ACCAF7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4996588B2B5DA75600ACCAF7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		499658942B5DA75700ACCAF7 /* Gliding-In-FlightTests */ = {
+			isa = PBXGroup;
+			children = (
+				499658952B5DA75700ACCAF7 /* Gliding_In_FlightTests.swift */,
+			);
+			path = "Gliding-In-FlightTests";
+			sourceTree = "<group>";
+		};
+		4996589E2B5DA75700ACCAF7 /* Gliding-In-FlightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4996589F2B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift */,
+				499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */,
+			);
+			path = "Gliding-In-FlightUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4996587A2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499658A52B5DA75700ACCAF7 /* Build configuration list for PBXNativeTarget "Gliding-In-Flight" */;
+			buildPhases = (
+				499658772B5DA75200ACCAF7 /* Sources */,
+				499658782B5DA75200ACCAF7 /* Frameworks */,
+				499658792B5DA75200ACCAF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gliding-In-Flight";
+			productName = "Gliding-In-Flight";
+			productReference = 4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		499658902B5DA75700ACCAF7 /* Gliding-In-FlightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499658A82B5DA75700ACCAF7 /* Build configuration list for PBXNativeTarget "Gliding-In-FlightTests" */;
+			buildPhases = (
+				4996588D2B5DA75700ACCAF7 /* Sources */,
+				4996588E2B5DA75700ACCAF7 /* Frameworks */,
+				4996588F2B5DA75700ACCAF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				499658932B5DA75700ACCAF7 /* PBXTargetDependency */,
+			);
+			name = "Gliding-In-FlightTests";
+			productName = "Gliding-In-FlightTests";
+			productReference = 499658912B5DA75700ACCAF7 /* Gliding-In-FlightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4996589A2B5DA75700ACCAF7 /* Gliding-In-FlightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499658AB2B5DA75700ACCAF7 /* Build configuration list for PBXNativeTarget "Gliding-In-FlightUITests" */;
+			buildPhases = (
+				499658972B5DA75700ACCAF7 /* Sources */,
+				499658982B5DA75700ACCAF7 /* Frameworks */,
+				499658992B5DA75700ACCAF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4996589D2B5DA75700ACCAF7 /* PBXTargetDependency */,
+			);
+			name = "Gliding-In-FlightUITests";
+			productName = "Gliding-In-FlightUITests";
+			productReference = 4996589B2B5DA75700ACCAF7 /* Gliding-In-FlightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		499658732B5DA75200ACCAF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					4996587A2B5DA75200ACCAF7 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					499658902B5DA75700ACCAF7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 4996587A2B5DA75200ACCAF7;
+					};
+					4996589A2B5DA75700ACCAF7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 4996587A2B5DA75200ACCAF7;
+					};
+				};
+			};
+			buildConfigurationList = 499658762B5DA75200ACCAF7 /* Build configuration list for PBXProject "Gliding-In-Flight" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 499658722B5DA75200ACCAF7;
+			productRefGroup = 4996587C2B5DA75200ACCAF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4996587A2B5DA75200ACCAF7 /* Gliding-In-Flight */,
+				499658902B5DA75700ACCAF7 /* Gliding-In-FlightTests */,
+				4996589A2B5DA75700ACCAF7 /* Gliding-In-FlightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		499658792B5DA75200ACCAF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4996588C2B5DA75600ACCAF7 /* Preview Assets.xcassets in Resources */,
+				499658882B5DA75600ACCAF7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4996588F2B5DA75700ACCAF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499658992B5DA75700ACCAF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		499658772B5DA75200ACCAF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
+				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
+				499658862B5DA75200ACCAF7 /* ContentView.swift in Sources */,
+				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4996588D2B5DA75700ACCAF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499658962B5DA75700ACCAF7 /* Gliding_In_FlightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499658972B5DA75700ACCAF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499658A22B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift in Sources */,
+				499658A02B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		499658932B5DA75700ACCAF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4996587A2B5DA75200ACCAF7 /* Gliding-In-Flight */;
+			targetProxy = 499658922B5DA75700ACCAF7 /* PBXContainerItemProxy */;
+		};
+		4996589D2B5DA75700ACCAF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4996587A2B5DA75200ACCAF7 /* Gliding-In-Flight */;
+			targetProxy = 4996589C2B5DA75700ACCAF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		499658A32B5DA75700ACCAF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		499658A42B5DA75700ACCAF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		499658A62B5DA75700ACCAF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Gliding-In-Flight/Gliding_In_Flight.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewstringfellow.Gliding-In-Flight";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		499658A72B5DA75700ACCAF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Gliding-In-Flight/Gliding_In_Flight.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewstringfellow.Gliding-In-Flight";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		499658A92B5DA75700ACCAF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewstringfellow.Gliding-In-FlightTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gliding-In-Flight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gliding-In-Flight";
+			};
+			name = Debug;
+		};
+		499658AA2B5DA75700ACCAF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewstringfellow.Gliding-In-FlightTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gliding-In-Flight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gliding-In-Flight";
+			};
+			name = Release;
+		};
+		499658AC2B5DA75700ACCAF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewstringfellow.Gliding-In-FlightUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Gliding-In-Flight";
+			};
+			name = Debug;
+		};
+		499658AD2B5DA75700ACCAF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewstringfellow.Gliding-In-FlightUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Gliding-In-Flight";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		499658762B5DA75200ACCAF7 /* Build configuration list for PBXProject "Gliding-In-Flight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499658A32B5DA75700ACCAF7 /* Debug */,
+				499658A42B5DA75700ACCAF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499658A52B5DA75700ACCAF7 /* Build configuration list for PBXNativeTarget "Gliding-In-Flight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499658A62B5DA75700ACCAF7 /* Debug */,
+				499658A72B5DA75700ACCAF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499658A82B5DA75700ACCAF7 /* Build configuration list for PBXNativeTarget "Gliding-In-FlightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499658A92B5DA75700ACCAF7 /* Debug */,
+				499658AA2B5DA75700ACCAF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499658AB2B5DA75700ACCAF7 /* Build configuration list for PBXNativeTarget "Gliding-In-FlightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499658AC2B5DA75700ACCAF7 /* Debug */,
+				499658AD2B5DA75700ACCAF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				499658832B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodel */,
+			);
+			currentVersion = 499658832B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodel */;
+			path = Gliding_In_Flight.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 499658732B5DA75200ACCAF7 /* Project object */;
+}

@@ -16,6 +16,8 @@
 		499658962B5DA75700ACCAF7 /* Gliding_In_FlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658952B5DA75700ACCAF7 /* Gliding_In_FlightTests.swift */; };
 		499658A02B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996589F2B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift */; };
 		499658A22B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */; };
+		499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B22B5DA9AA00ACCAF7 /* Model.swift */; };
+		499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B42B5DA9B100ACCAF7 /* Logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4996589B2B5DA75700ACCAF7 /* Gliding-In-FlightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gliding-In-FlightUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4996589F2B5DA75700ACCAF7 /* Gliding_In_FlightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightUITests.swift; sourceTree = "<group>"; };
 		499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		499658B22B5DA9AA00ACCAF7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		499658B42B5DA9B100ACCAF7 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
+				499658B12B5DA9A000ACCAF7 /* GPS */,
 				4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */,
 				499658802B5DA75200ACCAF7 /* Persistence.swift */,
 				499658852B5DA75200ACCAF7 /* ContentView.swift */,
@@ -133,6 +138,15 @@
 				499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */,
 			);
 			path = "Gliding-In-FlightUITests";
+			sourceTree = "<group>";
+		};
+		499658B12B5DA9A000ACCAF7 /* GPS */ = {
+			isa = PBXGroup;
+			children = (
+				499658B22B5DA9AA00ACCAF7 /* Model.swift */,
+				499658B42B5DA9B100ACCAF7 /* Logic.swift */,
+			);
+			path = GPS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499658862B5DA75200ACCAF7 /* ContentView.swift in Sources */,
+				499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */,
 				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +441,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Test;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -461,6 +480,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Test;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

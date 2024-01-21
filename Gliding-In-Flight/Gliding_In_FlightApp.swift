@@ -10,11 +10,10 @@ import SwiftUI
 @main
 struct Gliding_In_FlightApp: App {
     let persistenceController = PersistenceController.shared
+    
+    let gps: GPSModel = GPSModel(activityType: .fitness)
+    
+    // FIGURE OUT HOW TO RENDER BASED ON PROPER LOCATION AUTHORIZATION
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
-    }
+
 }

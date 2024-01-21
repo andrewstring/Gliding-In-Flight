@@ -13,28 +13,34 @@ class GPSModel {
     typealias CLLocationAccuracy = Double
     let locationManager: CLLocationManager
     let locationDelegate: LocationDelegate
+    var properAuthorization: Bool
     
     init(activityType: CLActivityType) {
-        locationManager = CLLocationManager()
-        locationManager.activityType = activityType
-        locationDelegate = LocationDelegate()
-        locationManager.delegate = locationDelegate
+        properAuthorization = false
+        self.locationDelegate = LocationDelegate()
+        self.locationManager = CLLocationManager()
+        self.locationManager.delegate = self.locationDelegate
+        self.locationManager.activityType = activityType
     }
 }
 
 class LocationDelegate: NSObject, CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ locationManager: CLLocationManager) {
-        switch self.locationManager.authorizationStatus {
+        switch locationManager.authorizationStatus {
         case .notDetermined:
-            <#code#>
+            /* WhenInUse Authorization will not allow app to
+             update location when operating in background */
+            locationManager.requestAlwaysAuthorization()
         case .restricted:
-            <#code#>
+            locationManager.requestAlwaysAuthorization()
         case .denied:
-            <#code#>
+            locationManager.requestAlwaysAuthorization()
         case .authorizedAlways:
-            <#code#>
+            print("Correct Authorization")
+        case .authorizedWhenInUse:
+            locationManager.requestAlwaysAuthorization()
         @unknown default:
-            <#code#>
+            print("other")
         }
     }
 }

@@ -12,13 +12,18 @@ import CoreLocation
 class GPSModel {
     typealias CLLocationAccuracy = Double
     let locationManager: CLLocationManager
+    let locationDelegate: LocationDelegate
     
     init(activityType: CLActivityType) {
         locationManager = CLLocationManager()
         locationManager.activityType = activityType
+        locationDelegate = LocationDelegate()
+        locationManager.delegate = locationDelegate
     }
-    
-    func verifyLocationServicesEnabled() {
+}
+
+class LocationDelegate: NSObject, CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ locationManager: CLLocationManager) {
         switch self.locationManager.authorizationStatus {
         case .notDetermined:
             <#code#>

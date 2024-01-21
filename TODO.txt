@@ -1,0 +1,9 @@
+Will probably be using CoreLocation for GPS tracking
+    https://developer.apple.com/documentation/corelocation
+
+Will need to get user to grant app permission for location services
+    https://developer.apple.com/documentation/corelocation/cllocationmanager/1620562-requestwheninuseauthorization
+
+SwiftUI MapKit
+    Good Video: https://www.youtube.com/watch?v=LwU-4LMh9Qs
+    https://www.youtube.com/watch?v=hWMkimzIQoU ***** AT 17 minutes

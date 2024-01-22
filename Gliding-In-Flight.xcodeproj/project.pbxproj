@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		498B37A72B5F0F250003E828 /* EnableLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B37A62B5F0F250003E828 /* EnableLocation.swift */; };
+		498B37A92B5F105C0003E828 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B37A82B5F105B0003E828 /* MapView.swift */; };
 		4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */; };
 		499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658802B5DA75200ACCAF7 /* Persistence.swift */; };
 		499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		498B37A62B5F0F250003E828 /* EnableLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableLocation.swift; sourceTree = "<group>"; };
+		498B37A82B5F105B0003E828 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gliding-In-Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightApp.swift; sourceTree = "<group>"; };
 		499658802B5DA75200ACCAF7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -80,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		494C51142B5EF8C10023E176 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				499658852B5DA75200ACCAF7 /* ContentView.swift */,
+				498B37A62B5F0F250003E828 /* EnableLocation.swift */,
+				498B37A82B5F105B0003E828 /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		499658722B5DA75200ACCAF7 = {
 			isa = PBXGroup;
 			children = (
@@ -103,10 +117,10 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
+				494C51142B5EF8C10023E176 /* Views */,
 				499658B12B5DA9A000ACCAF7 /* GPS */,
 				4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */,
 				499658802B5DA75200ACCAF7 /* Persistence.swift */,
-				499658852B5DA75200ACCAF7 /* ContentView.swift */,
 				499658872B5DA75600ACCAF7 /* Assets.xcassets */,
 				499658892B5DA75600ACCAF7 /* Gliding_In_Flight.entitlements */,
 				499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */,
@@ -280,10 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */,
+				498B37A92B5F105C0003E828 /* MapView.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499658862B5DA75200ACCAF7 /* ContentView.swift in Sources */,
 				499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */,
+				498B37A72B5F0F250003E828 /* EnableLocation.swift in Sources */,
 				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

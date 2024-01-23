@@ -10,11 +10,15 @@ import MapKit
 
 struct MapView: View {
     
-    let nycCoordinates: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7128, longitude: 74.0060)
+    static let nycCoordinates: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7128, longitude: 74.0060)
+    static let coordinateRegion = MKCoordinateRegion(nycCoordinates, 1, 1)
     
     var body: some View {
         Map {
-            MapCircle("JKL", coordinate: .nycCoordinates)
+            Marker
+        }
+        Map(coordinateRegion: MapView.coordinateRegion) {
+            MapMarker(coordinate: MapView.nycCoordinates)
         }
     }
 }

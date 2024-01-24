@@ -9,18 +9,30 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+//    var body: some View {
+//        Text("hello")
+//    }
     
-    static let nycCoordinates: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7128, longitude: 74.0060)
-    static let coordinateRegion = MKCoordinateRegion(nycCoordinates, 1, 1)
+    let nycCoordinates: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7128, longitude: 74.0060)
     
     var body: some View {
-        Map {
-            Marker
-        }
-        Map(coordinateRegion: MapView.coordinateRegion) {
-            MapMarker(coordinate: MapView.nycCoordinates)
+        if #available(iOS 17.0, *) {
+            Map {
+                Marker("JKL", coordinate: nycCoordinates)
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
+//
+//    var body: some View {
+//        Map {
+//            Marker
+//        }
+//        Map(coordinateRegion: MapView.coordinateRegion) {
+//            MapMarker(coordinate: MapView.nycCoordinates)
+//        }
+//    }
 }
 
 struct MapView_Previews: PreviewProvider {

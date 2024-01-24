@@ -24,12 +24,11 @@ struct Gliding_In_FlightApp: App {
     // FIGURE OUT HOW TO RENDER BASED ON PROPER LOCATION AUTHORIZATION
     var body: some Scene {
         WindowGroup {
-            switch gps.locationManager.authorizationStatus {
-                case.authorizedAlways:
-                    MapView()
-                default:
-                    EnableLocation()
-            }
+            
+            guard gps.locationManager.authorizationStatus == .authorizedAlways else { EnableLocation() }
+            guard #available(iOS 17.0, *) else { OutdatedIOS() }
+         
+            MapView()
         }
     }
 }

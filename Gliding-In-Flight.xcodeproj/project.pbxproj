@@ -20,6 +20,7 @@
 		499658A22B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */; };
 		499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B22B5DA9AA00ACCAF7 /* Model.swift */; };
 		499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B42B5DA9B100ACCAF7 /* Logic.swift */; };
+		49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		499658B22B5DA9AA00ACCAF7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		499658B42B5DA9B100ACCAF7 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedIOS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				499658852B5DA75200ACCAF7 /* ContentView.swift */,
 				498B37A62B5F0F250003E828 /* EnableLocation.swift */,
 				498B37A82B5F105B0003E828 /* MapView.swift */,
+				49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */,
 				499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */,
 				498B37A92B5F105C0003E828 /* MapView.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,

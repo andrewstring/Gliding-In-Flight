@@ -26,28 +26,6 @@ class GPSModel: ObservableObject {
 
 class LocationDelegate: NSObject, CLLocationManagerDelegate, ObservableObject {
     
-    func sendTrackingInfo(_ locations: [CLLocation]) {
-        struct Message: Encodable {
-            let latitude: Double
-            let longitude: Double
-        }
-        
-        
-        let url: URL = URL(string: "http://192.168.200.119:3000/datasend/gps")!
-        var request = URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpMethod = "POST"
-        let data = Message(latitude: Double(locations[0].coordinate.latitude), longitude: Double(locations[0].coordinate.latitude))
-        request.httpBody = try! JSONEncoder().encode(data)
-        print(request.httpBody)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                print("Sent")
-        }
-        task.resume()
-    }
-    
     func locationManagerDidChangeAuthorization(_ locationManager: CLLocationManager) {
         switch locationManager.authorizationStatus {
             case .authorizedAlways:

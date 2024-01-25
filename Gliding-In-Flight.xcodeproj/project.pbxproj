@@ -20,6 +20,8 @@
 		499658A22B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */; };
 		499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B22B5DA9AA00ACCAF7 /* Model.swift */; };
 		499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B42B5DA9B100ACCAF7 /* Logic.swift */; };
+		499C41CE2B61D9C300FE42BA /* RuntimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C41CD2B61D9C300FE42BA /* RuntimeView.swift */; };
+		499C41D02B61DB0900FE42BA /* StartTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C41CF2B61DB0900FE42BA /* StartTracking.swift */; };
 		49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		499658B22B5DA9AA00ACCAF7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		499658B42B5DA9B100ACCAF7 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		499C41CD2B61D9C300FE42BA /* RuntimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeView.swift; sourceTree = "<group>"; };
+		499C41CF2B61DB0900FE42BA /* StartTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTracking.swift; sourceTree = "<group>"; };
 		49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedIOS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,8 @@
 				498B37A62B5F0F250003E828 /* EnableLocation.swift */,
 				498B37A82B5F105B0003E828 /* MapView.swift */,
 				49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */,
+				499C41CD2B61D9C300FE42BA /* RuntimeView.swift */,
+				499C41CF2B61DB0900FE42BA /* StartTracking.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,9 +306,11 @@
 				499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */,
 				498B37A92B5F105C0003E828 /* MapView.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
+				499C41CE2B61D9C300FE42BA /* RuntimeView.swift in Sources */,
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499658862B5DA75200ACCAF7 /* ContentView.swift in Sources */,
 				499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */,
+				499C41D02B61DB0900FE42BA /* StartTracking.swift in Sources */,
 				498B37A72B5F0F250003E828 /* EnableLocation.swift in Sources */,
 				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
 			);
@@ -461,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
+				DEVELOPMENT_TEAM = XQXW6778L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
@@ -500,6 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
+				DEVELOPMENT_TEAM = XQXW6778L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;

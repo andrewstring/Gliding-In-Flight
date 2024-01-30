@@ -17,7 +17,8 @@ struct RuntimeView: View {
     @ViewBuilder
     var body: some View {
         if gps.locationManager.authorizationStatus == CLAuthorizationStatus.authorizedAlways {
-            StartTracking(gps: $gps)
+            TESTER(gps: $gps)
+//            RuntimeMap(gps: $gps)
         } else {
             EnableLocation()
         }

@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+
 struct MapView: View {
 //    var body: some View {
 //        Text("hello")
@@ -21,7 +22,7 @@ struct MapView: View {
                 Marker("JKL", coordinate: nycCoordinates)
             }
         } else {
-            // Fallback on earlier versions
+            OutdatedIOS()
         }
     }
 //

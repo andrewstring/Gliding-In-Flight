@@ -29,7 +29,7 @@ import SwiftUI
 //    task.resume()
 //}
 
-struct StartTracking: View {
+struct TESTER: View {
     @Binding var gps: GPSModel
     
     func locationUpdate() {
@@ -44,6 +44,23 @@ struct StartTracking: View {
         .background(Color(red: 0, green:0, blue: 0.2))
         .foregroundStyle(.white)
         .clipShape(Capsule())
+        .padding()
+        Button(action: locationUpdate) {
+            Text("Get Glider")
+                .padding()
+        }
+        .background(Color(red: 0, green:0, blue: 0.2))
+        .foregroundStyle(.white)
+        .clipShape(Capsule())
+        .padding()
+        Button(action: locationUpdate) {
+            Text("Get Flight")
+                .padding()
+        }
+        .background(Color(red: 0, green:0, blue: 0.2))
+        .foregroundStyle(.white)
+        .clipShape(Capsule())
+        .padding()
     }
 }
 

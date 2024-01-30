@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49288E6C2B621A5300F6E6DF /* Out.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49288E6B2B621A5300F6E6DF /* Out.swift */; };
+		49288E6C2B621A5300F6E6DF /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49288E6B2B621A5300F6E6DF /* APIConfig.swift */; };
 		498B37A72B5F0F250003E828 /* EnableLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B37A62B5F0F250003E828 /* EnableLocation.swift */; };
 		498B37A92B5F105C0003E828 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B37A82B5F105B0003E828 /* MapView.swift */; };
 		4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */; };
@@ -22,8 +22,13 @@
 		499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B22B5DA9AA00ACCAF7 /* Model.swift */; };
 		499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658B42B5DA9B100ACCAF7 /* Logic.swift */; };
 		499C41CE2B61D9C300FE42BA /* RuntimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C41CD2B61D9C300FE42BA /* RuntimeView.swift */; };
-		499C41D02B61DB0900FE42BA /* StartTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C41CF2B61DB0900FE42BA /* StartTracking.swift */; };
+		499C41D02B61DB0900FE42BA /* TESTER.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C41CF2B61DB0900FE42BA /* TESTER.swift */; };
+		49A5E7FE2B68927400B08107 /* APIGlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E7FD2B68927400B08107 /* APIGlider.swift */; };
+		49A5E8002B68927B00B08107 /* APIFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E7FF2B68927B00B08107 /* APIFlight.swift */; };
+		49A5E8022B68928200B08107 /* APIThermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E8012B68928200B08107 /* APIThermal.swift */; };
+		49A5E8042B68940D00B08107 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E8032B68940D00B08107 /* Config.swift */; };
 		49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */; };
+		49E518292B66F78C00628D0B /* RuntimeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E518282B66F78C00628D0B /* RuntimeMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		49288E6B2B621A5300F6E6DF /* Out.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Out.swift; sourceTree = "<group>"; };
+		49288E6B2B621A5300F6E6DF /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		498B37A62B5F0F250003E828 /* EnableLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableLocation.swift; sourceTree = "<group>"; };
 		498B37A82B5F105B0003E828 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gliding-In-Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,8 +68,13 @@
 		499658B22B5DA9AA00ACCAF7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		499658B42B5DA9B100ACCAF7 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		499C41CD2B61D9C300FE42BA /* RuntimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeView.swift; sourceTree = "<group>"; };
-		499C41CF2B61DB0900FE42BA /* StartTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTracking.swift; sourceTree = "<group>"; };
+		499C41CF2B61DB0900FE42BA /* TESTER.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTER.swift; sourceTree = "<group>"; };
+		49A5E7FD2B68927400B08107 /* APIGlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGlider.swift; sourceTree = "<group>"; };
+		49A5E7FF2B68927B00B08107 /* APIFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFlight.swift; sourceTree = "<group>"; };
+		49A5E8012B68928200B08107 /* APIThermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIThermal.swift; sourceTree = "<group>"; };
+		49A5E8032B68940D00B08107 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedIOS.swift; sourceTree = "<group>"; };
+		49E518282B66F78C00628D0B /* RuntimeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,23 +102,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49288E6A2B621A3F00F6E6DF /* DataComm */ = {
+		49288E6A2B621A3F00F6E6DF /* API */ = {
 			isa = PBXGroup;
 			children = (
-				49288E6B2B621A5300F6E6DF /* Out.swift */,
+				49288E6B2B621A5300F6E6DF /* APIConfig.swift */,
+				49A5E7FD2B68927400B08107 /* APIGlider.swift */,
+				49A5E7FF2B68927B00B08107 /* APIFlight.swift */,
+				49A5E8012B68928200B08107 /* APIThermal.swift */,
 			);
-			path = DataComm;
+			path = API;
 			sourceTree = "<group>";
 		};
 		494C51142B5EF8C10023E176 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				49E5182A2B66FC2600628D0B /* Icon */,
 				499658852B5DA75200ACCAF7 /* ContentView.swift */,
 				498B37A62B5F0F250003E828 /* EnableLocation.swift */,
 				498B37A82B5F105B0003E828 /* MapView.swift */,
 				49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */,
 				499C41CD2B61D9C300FE42BA /* RuntimeView.swift */,
-				499C41CF2B61DB0900FE42BA /* StartTracking.swift */,
+				499C41CF2B61DB0900FE42BA /* TESTER.swift */,
+				49E518282B66F78C00628D0B /* RuntimeMap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,7 +151,7 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
-				49288E6A2B621A3F00F6E6DF /* DataComm */,
+				49288E6A2B621A3F00F6E6DF /* API */,
 				494C51142B5EF8C10023E176 /* Views */,
 				499658B12B5DA9A000ACCAF7 /* GPS */,
 				4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */,
@@ -145,6 +160,7 @@
 				499658892B5DA75600ACCAF7 /* Gliding_In_Flight.entitlements */,
 				499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */,
 				4996588A2B5DA75600ACCAF7 /* Preview Content */,
+				49A5E8032B68940D00B08107 /* Config.swift */,
 			);
 			path = "Gliding-In-Flight";
 			sourceTree = "<group>";
@@ -181,6 +197,13 @@
 				499658B42B5DA9B100ACCAF7 /* Logic.swift */,
 			);
 			path = GPS;
+			sourceTree = "<group>";
+		};
+		49E5182A2B66FC2600628D0B /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,13 +339,18 @@
 				49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */,
 				499658B32B5DA9AA00ACCAF7 /* Model.swift in Sources */,
 				498B37A92B5F105C0003E828 /* MapView.swift in Sources */,
+				49A5E8002B68927B00B08107 /* APIFlight.swift in Sources */,
+				49A5E8042B68940D00B08107 /* Config.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
+				49A5E8022B68928200B08107 /* APIThermal.swift in Sources */,
+				49A5E7FE2B68927400B08107 /* APIGlider.swift in Sources */,
 				499C41CE2B61D9C300FE42BA /* RuntimeView.swift in Sources */,
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499658862B5DA75200ACCAF7 /* ContentView.swift in Sources */,
 				499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */,
-				49288E6C2B621A5300F6E6DF /* Out.swift in Sources */,
-				499C41D02B61DB0900FE42BA /* StartTracking.swift in Sources */,
+				49E518292B66F78C00628D0B /* RuntimeMap.swift in Sources */,
+				49288E6C2B621A5300F6E6DF /* APIConfig.swift in Sources */,
+				499C41D02B61DB0900FE42BA /* TESTER.swift in Sources */,
 				498B37A72B5F0F250003E828 /* EnableLocation.swift in Sources */,
 				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
 			);

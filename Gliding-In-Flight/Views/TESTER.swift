@@ -54,7 +54,7 @@ struct TESTER: View {
         .foregroundStyle(.white)
         .clipShape(Capsule())
         .padding()
-        Button(action: {APIGlider.getGlider(gliderId: "jkl0")} ) {
+        Button(action: {APIGlider.addGlider(num: "10")} ) {
             Text("Get Flight")
                 .padding()
         }

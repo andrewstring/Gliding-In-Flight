@@ -6,3 +6,24 @@
 //
 
 import Foundation
+
+struct APIFlight {
+    static func getFlight(flightId: String) {
+        APIBase.getRequest(path: "/glider-tracking/flight?id=\(flightId)")
+    }
+    
+    static func addFlight() {
+//        APIBase.postRequest(path: "/glider-tracking/flight")
+    }
+    
+    static func updateFlight() {
+//        APIBase.updateRequest(path: "/glider-tracking/flight")
+        
+    }
+    
+    static func deleteFlight() {
+//        APIBase.updateRequest(path: "/glider-tracking/flight")
+        
+    }
+    
+}

@@ -7,20 +7,29 @@
 
 import Foundation
 
+struct Location {
+    let latitude: Double
+    let longitude: Double
+    let altitude: Double?
+    let absoluteAltitude: Double?
+    let relativeAltitude: Double?
+    let speed: Double?
+}
+
 struct LocationEncodable: Encodable {
     let latitude: Double
     let longitude: Double
-    let altitude: Double
-    let absoluteAltitude: Double
-    let relativeAltitude: Double
-    let speed: Double
+    let altitude: Double?
+    let absoluteAltitude: Double?
+    let relativeAltitude: Double?
+    let speed: Double?
 }
 
 struct LocationDecodable: Decodable {
     let latitude: Double
     let longitude: Double
-    let altitude: Double
-    let absoluteAltitude: Double
-    let relativeAltitude: Double
-    let speed: Double
+    let altitude: Double?
+    let absoluteAltitude: Double?
+    let relativeAltitude: Double?
+    let speed: Double?
 }

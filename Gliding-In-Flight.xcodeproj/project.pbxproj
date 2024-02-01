@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49288E6B2B621A5300F6E6DF /* APIBase.swift */; };
+		495F432E2B6B3396008BB485 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F432D2B6B3396008BB485 /* UserStore.swift */; };
 		498B37A72B5F0F250003E828 /* EnableLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B37A62B5F0F250003E828 /* EnableLocation.swift */; };
 		498B37A92B5F105C0003E828 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B37A82B5F105B0003E828 /* MapView.swift */; };
 		499209342B69CF9700A9A2CD /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209332B69CF9600A9A2CD /* Glider.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		49288E6B2B621A5300F6E6DF /* APIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBase.swift; sourceTree = "<group>"; };
+		495F432D2B6B3396008BB485 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		498B37A62B5F0F250003E828 /* EnableLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableLocation.swift; sourceTree = "<group>"; };
 		498B37A82B5F105B0003E828 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		499209332B69CF9600A9A2CD /* Glider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glider.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		495F432B2B6B3381008BB485 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				495F432D2B6B3396008BB485 /* UserStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		499209312B69CF7900A9A2CD /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
+				495F432B2B6B3381008BB485 /* DataStore */,
 				499209392B69E99000A9A2CD /* Util */,
 				499209312B69CF7900A9A2CD /* Data */,
 				494C51142B5EF8C10023E176 /* Views */,
@@ -397,6 +408,7 @@
 				499209382B69CFA400A9A2CD /* Flight.swift in Sources */,
 				49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */,
 				499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */,
+				495F432E2B6B3396008BB485 /* UserStore.swift in Sources */,
 				49E518292B66F78C00628D0B /* RuntimeMap.swift in Sources */,
 				4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */,
 				49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */,

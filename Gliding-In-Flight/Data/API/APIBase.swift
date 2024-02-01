@@ -73,11 +73,15 @@ struct APIBase {
         // Get request does not have a body
         request.httpBody = nil
 
-
         let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
-            guard let data = dataOpt else { return }
-            print(data)
-            return
+            if let data = dataOpt {
+                do {
+                    let decodedData = try JSONDecoder().decode(GliderResponse.self, from: data)
+                    print(decodedData)
+                } catch {
+                    print("Issue decoding data")
+                }
+            }
         }
         
         task.resume()
@@ -96,10 +100,14 @@ struct APIBase {
         request.httpBody = bodyData
         
         let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, errorOpt) -> Void in
-            guard let data = dataOpt else { print("No Data"); return }
-            print("DATA")
-            print(data)
-            return
+            if let data = dataOpt {
+                do {
+                    let decodedData = try JSONDecoder().decode(GliderResponse.self, from: data)
+                    print(decodedData)
+                } catch {
+                    print("Issue decoding data")
+                }
+            }
         }
         
         task.resume()

@@ -7,9 +7,16 @@
 
 import Foundation
 
-struct Flight: Encodable {
+struct FlightEncodable: Encodable {
     let id: String
-    let glider: Glider
-    let dateOfFlight: Date
-    let flightData: [String: Double]
+    let glider: GliderEncodable
+    let dateOfFlight: String
+    let locations: [LocationEncodable]
+}
+
+struct FlightDecodable: Decodable {
+    let id: String
+    let glider: GliderDecodable
+    let dateOfFlight: String
+    let locations: [LocationDecodable]
 }

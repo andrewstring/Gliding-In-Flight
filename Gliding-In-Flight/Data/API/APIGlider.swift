@@ -18,16 +18,13 @@ struct APIGlider {
     
     static func addGlider(num: String) {
 //        APIBase.postRequest(path: "/glider-tracking/glider")
-        let testGlider: Glider = Glider(
+        let testGlider: GliderEncodable = GliderEncodable(
             id: "test\(num)",
             name: "test\(num)",
-            location: ["test\(num)":1.0],
-            lastUpdate: DateTime.getDateTime().toString(),
-            previousAltitude: 1.0,
-            altitude: 1.0,
-            absoluteAltitude: 1.0,
-            relativeAltitude: 1.0,
-            speed: 1.0
+            currentLocation: Location(latitude: 1.0, longitude: 1.0, altitude: 1.0, absoluteAltitude: 1.0, relativeAltitude: 1.0, speed: 1.0),
+            currentUpdate: DateTime.getDateTime().toString(),
+            lastLocation: Location(latitude: 1.0, longitude: 1.0, altitude: 1.0, absoluteAltitude: 1.0, relativeAltitude: 1.0, speed: 1.0),
+            lastUpdate: DateTime.getDateTime().toString()
         )
         APIBase.postRequest(path: "\(gliderRoute)", data: testGlider)
     }

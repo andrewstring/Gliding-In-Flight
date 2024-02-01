@@ -31,6 +31,9 @@
 		49A5E8002B68927B00B08107 /* APIFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E7FF2B68927B00B08107 /* APIFlight.swift */; };
 		49A5E8022B68928200B08107 /* APIThermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E8012B68928200B08107 /* APIThermal.swift */; };
 		49A5E8042B68940D00B08107 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E8032B68940D00B08107 /* Config.swift */; };
+		49C1C4E12B6AEC3A00B5F368 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E02B6AEC3A00B5F368 /* APIError.swift */; };
+		49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E22B6AF31100B5F368 /* Location.swift */; };
+		49C1C4E52B6AFDA600B5F368 /* ObjectGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */; };
 		49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */; };
 		49E518292B66F78C00628D0B /* RuntimeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E518282B66F78C00628D0B /* RuntimeMap.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +84,9 @@
 		49A5E7FF2B68927B00B08107 /* APIFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFlight.swift; sourceTree = "<group>"; };
 		49A5E8012B68928200B08107 /* APIThermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIThermal.swift; sourceTree = "<group>"; };
 		49A5E8032B68940D00B08107 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		49C1C4E02B6AEC3A00B5F368 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		49C1C4E22B6AF31100B5F368 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectGenerator.swift; sourceTree = "<group>"; };
 		49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedIOS.swift; sourceTree = "<group>"; };
 		49E518282B66F78C00628D0B /* RuntimeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +123,7 @@
 				49A5E7FD2B68927400B08107 /* APIGlider.swift */,
 				49A5E7FF2B68927B00B08107 /* APIFlight.swift */,
 				49A5E8012B68928200B08107 /* APIThermal.swift */,
+				49C1C4E02B6AEC3A00B5F368 /* APIError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -151,6 +158,8 @@
 				499209332B69CF9600A9A2CD /* Glider.swift */,
 				499209352B69CF9F00A9A2CD /* Thermal.swift */,
 				499209372B69CFA400A9A2CD /* Flight.swift */,
+				49C1C4E22B6AF31100B5F368 /* Location.swift */,
+				49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499658862B5DA75200ACCAF7 /* ContentView.swift in Sources */,
 				499209382B69CFA400A9A2CD /* Flight.swift in Sources */,
+				49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */,
 				499658B52B5DA9B100ACCAF7 /* Logic.swift in Sources */,
 				49E518292B66F78C00628D0B /* RuntimeMap.swift in Sources */,
 				4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */,
@@ -393,6 +403,8 @@
 				499C41D02B61DB0900FE42BA /* TESTER.swift in Sources */,
 				498B37A72B5F0F250003E828 /* EnableLocation.swift in Sources */,
 				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
+				49C1C4E52B6AFDA600B5F368 /* ObjectGenerator.swift in Sources */,
+				49C1C4E12B6AEC3A00B5F368 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct Thermal: Encodable {
+struct ThermalEncodable: Encodable {
         
+}
+
+struct ThermalDecodable: Decodable {
+    
 }

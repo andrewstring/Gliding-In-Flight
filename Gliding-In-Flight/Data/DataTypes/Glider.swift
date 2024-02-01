@@ -8,14 +8,26 @@
 import Foundation
 
 
-struct Glider: Encodable {
+struct GliderEncodable: Encodable {
     let id: String
     let name: String
-    let location: [String: Double]
+    let currentLocation: LocationEncodable
+    let currentUpdate: String
+    let lastLocation: LocationEncodable
     let lastUpdate: String
-    let previousAltitude: Double
-    let altitude: Double
-    let absoluteAltitude: Double
-    let relativeAltitude: Double
-    let speed: Double
+}
+
+
+struct GliderDecodable: Decodable {
+    let id: String
+    let name: String
+    let currentLocation: LocationDecodable
+    let currentUpdate: String
+    let lastLocation: LocationDecodable
+    let lastUpdate: String
+}
+
+struct GliderResponse: Decodable {
+    let message: String
+    let data: GliderDecodable
 }

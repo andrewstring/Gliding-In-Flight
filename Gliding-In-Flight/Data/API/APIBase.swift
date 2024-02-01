@@ -95,8 +95,9 @@ struct APIBase {
         guard let bodyData = bodyDataOpt else { return }
         request.httpBody = bodyData
         
-        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
-            guard let data = dataOpt else { return }
+        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, errorOpt) -> Void in
+            guard let data = dataOpt else { print("No Data"); return }
+            print("DATA")
             print(data)
             return
         }

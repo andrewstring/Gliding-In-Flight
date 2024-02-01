@@ -8,6 +8,14 @@
 import Foundation
 
 struct Config {
+    /*
+     Server IP
     static let url: String = "http://192.168.200.119"
+     */
+    
+    // Desktop IP
+    static let url: String = "http://192.168.0.155"
+    
+    
     static let port: String = "3000"
 }

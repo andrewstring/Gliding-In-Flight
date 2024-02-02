@@ -9,14 +9,18 @@ import Foundation
 
 // Handles the persistent storage of the flight
 class FlightStore: ObservableObject {
-    @Published var flight: Flight?
+    @Published var flights: [Flight]
+    
+    init() {
+        self.flights = []
+    }
         
     private static func flightURL() throws -> URL? {
         do {
             let flightURL = try FileManager.default.url(for: .documentDirectory,
                                         in: .userDomainMask,
                                         appropriateFor: nil,
-                                        create: false
+                                        create: true
             )
             .appendingPathComponent("flight.data")
             print(flightURL)
@@ -27,9 +31,23 @@ class FlightStore: ObservableObject {
         }
     }
     
-    func flightLoad() async throws {
-        guard let flightURL = try Self.flightURL() else { return }
-        guard let flightData = try? Data(contentsOf: flightURL) else { return }
-        self.flight = try? JSONDecoder().decode(Flight.self, from: flightData)
+    func flightsLoad() async throws {
+        let task = Task<[Flight], Error> {
+            guard let flightURL = try? Self.flightURL() else { return [] }
+            guard let flightData = try? Data(contentsOf: flightURL) else { return [] }
+            guard let decodedFlightData = try? JSONDecoder().decode([Flight].self, from: flightData) else { return [] }
+            return decodedFlightData
+        }
+        self.flights = try await task.value
+    }
+    
+    func flightSave(flight: Flight) async throws -> Flight? {
+        let task = Task<Flight?, Error> {
+            guard let flightURL = try? Self.flightURL() else { return nil }
+            guard let encodedFlight = try? JSONEncoder().encode(flight) else { return nil }
+            try encodedFlight.write(to: flightURL)
+            return flight
+        }
+        return try await task.value
     }
 }

@@ -16,7 +16,7 @@ class UserStore: ObservableObject {
             let userURL = try FileManager.default.url(for: .documentDirectory,
                                         in: .userDomainMask,
                                         appropriateFor: nil,
-                                        create: false
+                                        create: true
             )
             .appendingPathComponent("user.data")
             print(userURL)
@@ -28,10 +28,22 @@ class UserStore: ObservableObject {
     }
     
     func userLoad() async throws {
-        guard let userURL = try Self.userURL() else { return }
-        guard let userData = try? Data(contentsOf: userURL) else { return }
-        self.user = try? JSONDecoder().decode(Glider.self, from: userData)
+        let task = Task<Glider?, Error> {
+            guard let userURL = try? Self.userURL() else { return nil }
+            guard let userData = try? Data(contentsOf: userURL) else { return nil }
+            let decodedUserData = try? JSONDecoder().decode(Glider.self, from: userData)
+            return decodedUserData
+        }
+        self.user = try? await task.value
     }
     
-    
+    func userSave(user: Glider) async throws -> Glider? {
+        let task = Task<Glider?, Error> {
+            guard let userURL = try? Self.userURL() else { return nil }
+            guard let encodedUser = try? JSONEncoder().encode(user) else { return nil }
+            try encodedUser.write(to: userURL)
+            return user
+        }
+        return try await task.value
+    }
 }

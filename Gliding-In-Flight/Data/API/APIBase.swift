@@ -63,7 +63,7 @@ struct APIBase {
         case DELETE = "DELETE"
     }
 
-    static func getRequest(path: String) {
+    static func getRequest<T: Decodable>(path: String, responseType: T.Type) {
         let url: URL = URL(string: "\(Config.url):\(Config.port)\(path)")!
         var request: URLRequest = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -72,45 +72,58 @@ struct APIBase {
         
         // Get request does not have a body
         request.httpBody = nil
-
-        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
-            if let data = dataOpt {
-                do {
-                    let decodedData = try JSONDecoder().decode(GliderResponse.self, from: data)
-                    print(decodedData)
-                } catch {
-                    print("Issue decoding data")
-                }
-            }
-        }
         
+        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
+            guard let data = dataOpt else { return }
+            guard let decodedData = try? JSONDecoder().decode(responseType, from: data) else { return }
+            print(decodedData)
+        }
         task.resume()
+
+//        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
+//            if let data = dataOpt {
+//                do {
+//                    let decodedData = try JSONDecoder().decode(responseType.self, from: data)
+//                    print(decodedData)
+//                } catch {
+//                    print("Issue decoding data")
+//                }
+//            }
+//        }
+        
+//        task.resume()
         
     }
     
-    static func postRequest(path: String, data: Encodable) {
+    static func postRequest<T: Decodable>(path: String, responseType: T.Type, requestData: Encodable) {
         let url: URL = URL(string: "\(Config.url):\(Config.port)\(path)")!
         var request: URLRequest = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = RequestType.POST.rawValue
         
-        let bodyDataOpt: Data? = try? JSONEncoder().encode(data)
-        guard let bodyData = bodyDataOpt else { return }
+        guard let bodyData = try? JSONEncoder().encode(requestData) else { return }
         request.httpBody = bodyData
         
-        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, errorOpt) -> Void in
-            if let data = dataOpt {
-                do {
-                    let decodedData = try JSONDecoder().decode(GliderResponse.self, from: data)
-                    print(decodedData)
-                } catch {
-                    print("Issue decoding data")
-                }
-            }
+        let task = URLSession.shared.dataTask(with: request) {(dataOpt, respone, error) -> Void in
+            guard let data = dataOpt else { return }
+            guard let decodedData = try? JSONDecoder().decode(responseType, from: data) else { return }
+            print(decodedData)
         }
-        
         task.resume()
+        
+//        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
+//            if let data = dataOpt {
+//                do {
+//                    let decodedData = try JSONDecoder().decode(data.Self, from: data)
+//                    print(decodedData)
+//                } catch {
+//                    print("Issue decoding data")
+//                }
+//            }
+//        }
+//        
+//        task.resume()
     }
     
     static func putRequest(path: String, data: Encodable) {

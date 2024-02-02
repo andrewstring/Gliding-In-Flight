@@ -9,25 +9,29 @@ import Foundation
 
 // Handles the persistent storage of the primary user
 class UserStore: ObservableObject {
-    @Published var user: Glider
+    @Published var user: Glider?
     
-    private static func userURL() throws -> URL {
-        try FileManager.default.url(for: .documentDirectory,
-                                    in: .userDomainMask,
-                                    appropriateFor: nil,
-                                    create: false
-        )
-        .appendingPathComponent("user.data")
+    private static func userURL() throws -> URL? {
+        do {
+            let userURL = try FileManager.default.url(for: .documentDirectory,
+                                        in: .userDomainMask,
+                                        appropriateFor: nil,
+                                        create: false
+            )
+            .appendingPathComponent("user.data")
+            print(userURL)
+            return userURL
+        } catch {
+            print("Error in UserStore.userURL")
+            return nil
+        }
     }
     
     func userLoad() async throws {
-        let task = Task<Glider, Error> {
-            let fileURL = try Self.fileURL()
-            guard let data = try? Data(contentsOf: fileURL) else {
-                return nil
-            }
-            let loadedUser = try JSONDecoder().decode(Glider.self, from: data)
-            return loadedUser
-        }
+        guard let userURL = try Self.userURL() else { return }
+        guard let userData = try? Data(contentsOf: userURL) else { return }
+        self.user = try? JSONDecoder().decode(Glider.self, from: userData)
     }
+    
+    
 }

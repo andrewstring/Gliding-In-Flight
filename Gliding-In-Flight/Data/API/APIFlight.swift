@@ -9,7 +9,7 @@ import Foundation
 
 struct APIFlight {
     static func getFlight(flightId: String) {
-        APIBase.getRequest(path: "/glider-tracking/flight?id=\(flightId)")
+//        APIBase.getRequest(path: "/glider-tracking/flight?id=\(flightId)")
     }
     
     static func addFlight() {

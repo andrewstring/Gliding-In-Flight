@@ -7,23 +7,30 @@
 
 import Foundation
 
-struct Flight {
+struct Flight: Codable {
     let id: String
     let glider: Glider
     let dateOfFlight: String
     let locations: [Location?]
 }
 
-struct FlightEncodable: Encodable {
-    let id: String
-    let glider: GliderEncodable
-    let dateOfFlight: String
-    let locations: [LocationEncodable?]
+struct FlightResponse: Decodable {
+    let message: String
+    let data: Flight?
 }
 
-struct FlightDecodable: Decodable {
-    let id: String
-    let glider: GliderDecodable
-    let dateOfFlight: String
-    let locations: [LocationDecodable?]
-}
+
+
+//struct FlightEncodable: Flight, Encodable {
+//    let id: String
+//    let glider: GliderEncodable
+//    let dateOfFlight: String
+//    let locations: [LocationEncodable?]
+//}
+//
+//struct FlightDecodable: Decodable {
+//    let id: String
+//    let glider: GliderDecodable
+//    let dateOfFlight: String
+//    let locations: [LocationDecodable?]
+//}

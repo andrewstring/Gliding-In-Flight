@@ -9,7 +9,7 @@ import Foundation
 
 struct APIThermal {
     static func getThermal(thermalId: String) {
-        APIBase.getRequest(path: "/glider-tracking/thermal?id=\(thermalId)")
+//        APIBase.getRequest(path: "/glider-tracking/thermal?id=\(thermalId)")
     }
     
     static func addThermal() {

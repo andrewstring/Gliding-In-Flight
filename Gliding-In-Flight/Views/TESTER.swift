@@ -37,7 +37,7 @@ struct TESTER: View {
     }
     
     var body: some View {
-        Button(action: locationUpdate) {
+        Button(action: { print("test") }) {
             Text("Start Tracking")
                 .padding()
         }

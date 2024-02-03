@@ -11,6 +11,12 @@ import Foundation
 class GliderStore: ObservableObject {
     @Published var glider: Glider?
     
+    init() {
+        Task {
+            try await self.gliderLoad()
+        }
+    }
+    
     private static func gliderURL() throws -> URL? {
         do {
             let gliderURL = try FileManager.default.url(for: .documentDirectory,
@@ -27,6 +33,7 @@ class GliderStore: ObservableObject {
         }
     }
     
+    @MainActor
     func gliderLoad() async throws {
         let task = Task<Glider?, Error> {
             guard let gliderURL = try? Self.gliderURL() else { return nil }
@@ -37,6 +44,7 @@ class GliderStore: ObservableObject {
         self.glider = try? await task.value
     }
     
+    @MainActor
     func gliderSave(glider: Glider) async throws -> Glider? {
         let task = Task<Glider?, Error> {
             guard let gliderURL = try? Self.gliderURL() else { return nil }

@@ -10,6 +10,7 @@ import CoreLocation
 
 class LocationSetup: NSObject, ObservableObject {
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
+    @Published var currentLocation: CLLocation?
     
     typealias CLLocationAccuracy = Double
     var locationManager: CLLocationManager
@@ -29,5 +30,17 @@ extension LocationSetup: CLLocationManagerDelegate {
         if (manager.authorizationStatus != .authorizedAlways) {
             manager.requestAlwaysAuthorization()
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("UpdatedLocation")
+        self.currentLocation = self.getLatestLocation(locations)
+    }
+    
+    func getLatestLocation(_ locations: [CLLocation]) -> CLLocation? {
+        if locations.count == 0 {
+            return nil
+        }
+        return locations[locations.count-1]
     }
 }

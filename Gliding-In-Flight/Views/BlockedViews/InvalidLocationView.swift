@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct NoLocationView: View {
+struct InvalidLocationView: View {
+    var message: String
+    
     var body: some View {
-        Text("User needs location")
+        Text(message)
     }
 }
-
-#Preview {
-    NoLocationView()
-}
+//
+//#Preview {
+//    InvalidLocationView()
+//}

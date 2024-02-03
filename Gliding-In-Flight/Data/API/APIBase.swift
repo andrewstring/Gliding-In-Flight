@@ -8,53 +8,6 @@
 import Foundation
 import CoreLocation
 
-
-func sendTrackingInfo(_ locations: [CLLocation]) {
-    struct Message: Encodable {
-        let dateTime: String
-        let latitude: Double
-        let longitude: Double
-        let altitude: Double
-        let speed: Double
-    }
-    
-    // Date and Time Processing
-    let date = Date()
-    let components = Calendar.current.dateComponents([.month,.day,.year,.hour,.minute,.second], from: date)
-//    let month = components.month
-//    let day = components.day
-//    let year = components.year
-//    let hour = components.hour
-//    let minute = components.minute
-//    let second = components.second
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "MM/dd/yyyy - hh:mm:ss"
-    let dateStringRep = dateFormatter.string(from: date)
-    
-    
-    
-    let url: URL = URL(string: "http://192.168.200.119:3000/glider-tracking/gps")!
-    var request = URLRequest(url: url)
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.setValue("application/json", forHTTPHeaderField: "Accept")
-    request.httpMethod = "POST"
-    
-    let data = Message(
-        dateTime: dateStringRep,
-        latitude: Double(locations[0].coordinate.latitude),
-        longitude: Double(locations[0].coordinate.latitude),
-        altitude: Double(locations[0].altitude),
-        speed: Double(locations[0].speed)
-    )
-    request.httpBody = try! JSONEncoder().encode(data)
-    
-    let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            print("Sent")
-    }
-    task.resume()
-}
-
-
 struct APIBase {
     enum RequestType: String {
         case GET = "GET"
@@ -79,20 +32,6 @@ struct APIBase {
             print(decodedData)
         }
         task.resume()
-
-//        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
-//            if let data = dataOpt {
-//                do {
-//                    let decodedData = try JSONDecoder().decode(responseType.self, from: data)
-//                    print(decodedData)
-//                } catch {
-//                    print("Issue decoding data")
-//                }
-//            }
-//        }
-        
-//        task.resume()
-        
     }
     
     static func postRequest<T: Decodable>(path: String, responseType: T.Type, requestData: Encodable) {
@@ -111,19 +50,6 @@ struct APIBase {
             print(decodedData)
         }
         task.resume()
-        
-//        let task = URLSession.shared.dataTask(with: request) {(dataOpt, response, error) -> Void in
-//            if let data = dataOpt {
-//                do {
-//                    let decodedData = try JSONDecoder().decode(data.Self, from: data)
-//                    print(decodedData)
-//                } catch {
-//                    print("Issue decoding data")
-//                }
-//            }
-//        }
-//        
-//        task.resume()
     }
     
     static func putRequest(path: String, data: Encodable) {
@@ -159,6 +85,52 @@ struct APIBase {
             print(data)
             return
         }
-        
     }
+    
 }
+
+
+//func sendTrackingInfo(_ locations: [CLLocation]) {
+//    struct Message: Encodable {
+//        let dateTime: String
+//        let latitude: Double
+//        let longitude: Double
+//        let altitude: Double
+//        let speed: Double
+//    }
+//    
+//    // Date and Time Processing
+//    let date = Date()
+//    let components = Calendar.current.dateComponents([.month,.day,.year,.hour,.minute,.second], from: date)
+////    let month = components.month
+////    let day = components.day
+////    let year = components.year
+////    let hour = components.hour
+////    let minute = components.minute
+////    let second = components.second
+//    let dateFormatter = DateFormatter()
+//    dateFormatter.dateFormat = "MM/dd/yyyy - hh:mm:ss"
+//    let dateStringRep = dateFormatter.string(from: date)
+//    
+//    
+//    
+//    let url: URL = URL(string: "http://192.168.200.119:3000/glider-tracking/gps")!
+//    var request = URLRequest(url: url)
+//    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//    request.setValue("application/json", forHTTPHeaderField: "Accept")
+//    request.httpMethod = "POST"
+//    
+//    let data = Message(
+//        dateTime: dateStringRep,
+//        latitude: Double(locations[0].coordinate.latitude),
+//        longitude: Double(locations[0].coordinate.latitude),
+//        altitude: Double(locations[0].altitude),
+//        speed: Double(locations[0].speed)
+//    )
+//    request.httpBody = try! JSONEncoder().encode(data)
+//    
+//    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            print("Sent")
+//    }
+//    task.resume()
+//}

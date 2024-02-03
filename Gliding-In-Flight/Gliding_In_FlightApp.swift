@@ -20,7 +20,7 @@ struct Gliding_In_FlightApp: App {
     // FIGURE OUT HOW TO RENDER BASED ON PROPER LOCATION AUTHORIZATION
     var body: some Scene {
         WindowGroup {
-            InitView()
+            RequestLocationView()
                 .environmentObject(gliderStore)
         }
     }

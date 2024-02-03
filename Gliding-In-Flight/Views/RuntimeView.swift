@@ -18,9 +18,8 @@ struct RuntimeView: View {
     var body: some View {
         if gps.locationManager.authorizationStatus == CLAuthorizationStatus.authorizedAlways {
             TESTER(gps: $gps)
-//            RuntimeMap(gps: $gps)
         } else {
-            EnableLocation()
+            NoLocationView()
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Config {
     /*
@@ -18,4 +19,10 @@ struct Config {
     
     
     static let port: String = "3000"
+    
+    
+    struct Colors {
+        static let primary: Color = Color(red: 0.698, green: 0.8588, blue: 0.6784)
+//        static let button: Color = Color()
+    }
 }

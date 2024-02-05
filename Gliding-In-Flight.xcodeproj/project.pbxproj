@@ -135,14 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49260BBF2B6DC2D900CA644F /* Standard Components */ = {
+		49260BBF2B6DC2D900CA644F /* StandardComponents */ = {
 			isa = PBXGroup;
 			children = (
 				49260BC22B6DC2FD00CA644F /* ButtonSubmit.swift */,
 				49260BCD2B6DDFFE00CA644F /* TextTitle.swift */,
 				49260BCF2B6DE07000CA644F /* TextFieldInput.swift */,
 			);
-			path = "Standard Components";
+			path = StandardComponents;
 			sourceTree = "<group>";
 		};
 		49260BC62B6DD5A300CA644F /* Model */ = {
@@ -173,7 +173,7 @@
 				498ED61D2B6DFB6D001984C6 /* GlidingViews */,
 				498ED61C2B6DFB2E001984C6 /* BlockedViews */,
 				498ED61B2B6DFB12001984C6 /* ValidationViews */,
-				49260BBF2B6DC2D900CA644F /* Standard Components */,
+				49260BBF2B6DC2D900CA644F /* StandardComponents */,
 				499C41CF2B61DB0900FE42BA /* TESTER.swift */,
 				49260BC42B6DD4C300CA644F /* RequestLocationView.swift */,
 			);

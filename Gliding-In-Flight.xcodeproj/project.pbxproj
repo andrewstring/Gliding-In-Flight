@@ -16,14 +16,17 @@
 		49260BCE2B6DDFFE00CA644F /* TextTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BCD2B6DDFFE00CA644F /* TextTitle.swift */; };
 		49260BD02B6DE07000CA644F /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BCF2B6DE07000CA644F /* TextFieldInput.swift */; };
 		49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49288E6B2B621A5300F6E6DF /* APIBase.swift */; };
+		4934BB2E2B70509D00F55BAE /* RouteStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2D2B70509D00F55BAE /* RouteStartStop.swift */; };
+		4934BB302B705F4800F55BAE /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2F2B705F4800F55BAE /* NavigationModel.swift */; };
+		494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494182B32B704B8500B49324 /* GlidingMapView.swift */; };
 		495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F432D2B6B3396008BB485 /* GliderStore.swift */; };
-		498B37A92B5F105C0003E828 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B37A82B5F105B0003E828 /* MapView.swift */; };
 		498ED6202B6E0842001984C6 /* ADSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498ED61F2B6E0842001984C6 /* ADSB.swift */; };
 		498ED6222B6E08E0001984C6 /* adsb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 498ED6212B6E08E0001984C6 /* adsb.txt */; };
 		499209342B69CF9700A9A2CD /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209332B69CF9600A9A2CD /* Glider.swift */; };
 		499209362B69CF9F00A9A2CD /* Thermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209352B69CF9F00A9A2CD /* Thermal.swift */; };
 		499209382B69CFA400A9A2CD /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209372B69CFA400A9A2CD /* Flight.swift */; };
 		4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992093C2B69E9AF00A9A2CD /* DateTime.swift */; };
+		49962B3B2B6F57A7008FE6F7 /* GlidingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */; };
 		4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */; };
 		499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658802B5DA75200ACCAF7 /* Persistence.swift */; };
 		499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */; };
@@ -71,14 +74,17 @@
 		49260BCD2B6DDFFE00CA644F /* TextTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTitle.swift; sourceTree = "<group>"; };
 		49260BCF2B6DE07000CA644F /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
 		49288E6B2B621A5300F6E6DF /* APIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBase.swift; sourceTree = "<group>"; };
+		4934BB2D2B70509D00F55BAE /* RouteStartStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStartStop.swift; sourceTree = "<group>"; };
+		4934BB2F2B705F4800F55BAE /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		494182B32B704B8500B49324 /* GlidingMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapView.swift; sourceTree = "<group>"; };
 		495F432D2B6B3396008BB485 /* GliderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GliderStore.swift; sourceTree = "<group>"; };
-		498B37A82B5F105B0003E828 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		498ED61F2B6E0842001984C6 /* ADSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSB.swift; sourceTree = "<group>"; };
 		498ED6212B6E08E0001984C6 /* adsb.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = adsb.txt; sourceTree = "<group>"; };
 		499209332B69CF9600A9A2CD /* Glider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glider.swift; sourceTree = "<group>"; };
 		499209352B69CF9F00A9A2CD /* Thermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermal.swift; sourceTree = "<group>"; };
 		499209372B69CFA400A9A2CD /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		4992093C2B69E9AF00A9A2CD /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapKit.swift; sourceTree = "<group>"; };
 		4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gliding-In-Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightApp.swift; sourceTree = "<group>"; };
 		499658802B5DA75200ACCAF7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		49A5E8012B68928200B08107 /* APIThermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIThermal.swift; sourceTree = "<group>"; };
 		49A5E8032B68940D00B08107 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		49B7F8B42B6C5B8300C2B6B1 /* FlightStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStore.swift; sourceTree = "<group>"; };
+		49BAE8E02B704C7B003B2020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49C1C4E02B6AEC3A00B5F368 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		49C1C4E22B6AF31100B5F368 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectGenerator.swift; sourceTree = "<group>"; };
@@ -138,12 +145,13 @@
 			path = "Standard Components";
 			sourceTree = "<group>";
 		};
-		49260BC62B6DD5A300CA644F /* Location */ = {
+		49260BC62B6DD5A300CA644F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				49260BC72B6DD5B100CA644F /* LocationSetup.swift */,
+				4934BB2F2B705F4800F55BAE /* NavigationModel.swift */,
 			);
-			path = Location;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		49288E6A2B621A3F00F6E6DF /* API */ = {
@@ -202,7 +210,9 @@
 		498ED61D2B6DFB6D001984C6 /* NavigationViews */ = {
 			isa = PBXGroup;
 			children = (
-				498B37A82B5F105B0003E828 /* MapView.swift */,
+				4934BB2D2B70509D00F55BAE /* RouteStartStop.swift */,
+				49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */,
+				494182B32B704B8500B49324 /* GlidingMapView.swift */,
 			);
 			path = NavigationViews;
 			sourceTree = "<group>";
@@ -269,7 +279,8 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
-				49260BC62B6DD5A300CA644F /* Location */,
+				49BAE8E02B704C7B003B2020 /* Info.plist */,
+				49260BC62B6DD5A300CA644F /* Model */,
 				499209392B69E99000A9A2CD /* Util */,
 				499209312B69CF7900A9A2CD /* Data */,
 				494C51142B5EF8C10023E176 /* Views */,
@@ -373,7 +384,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					4996587A2B5DA75200ACCAF7 = {
 						CreatedOnToolsVersion = 14.2;
@@ -442,10 +453,11 @@
 			files = (
 				49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */,
 				499209362B69CF9F00A9A2CD /* Thermal.swift in Sources */,
-				498B37A92B5F105C0003E828 /* MapView.swift in Sources */,
 				49A5E8002B68927B00B08107 /* APIFlight.swift in Sources */,
+				494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */,
 				49A5E8042B68940D00B08107 /* Config.swift in Sources */,
 				49260BC82B6DD5B100CA644F /* LocationSetup.swift in Sources */,
+				4934BB2E2B70509D00F55BAE /* RouteStartStop.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
 				49260BD02B6DE07000CA644F /* TextFieldInput.swift in Sources */,
 				499209342B69CF9700A9A2CD /* Glider.swift in Sources */,
@@ -456,6 +468,8 @@
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499209382B69CFA400A9A2CD /* Flight.swift in Sources */,
 				49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */,
+				4934BB302B705F4800F55BAE /* NavigationModel.swift in Sources */,
+				49962B3B2B6F57A7008FE6F7 /* GlidingMapKit.swift in Sources */,
 				49260BBD2B6DAFA400CA644F /* LoginView.swift in Sources */,
 				495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */,
 				4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */,
@@ -538,9 +552,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -597,9 +613,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -624,10 +642,12 @@
 				CODE_SIGN_ENTITLEMENTS = "Gliding-In-Flight/Gliding_In_Flight.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
 				DEVELOPMENT_TEAM = XQXW6778L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gliding-In-Flight/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
 				INFOPLIST_KEY_NSLocationUsageDescription = Test;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Test;
@@ -646,6 +666,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ld_classic";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewstringfellow.Gliding-In-Flight";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -664,10 +685,12 @@
 				CODE_SIGN_ENTITLEMENTS = "Gliding-In-Flight/Gliding_In_Flight.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gliding-In-Flight/Preview Content\"";
 				DEVELOPMENT_TEAM = XQXW6778L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gliding-In-Flight/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
 				INFOPLIST_KEY_NSLocationUsageDescription = Test;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Test;
@@ -703,6 +726,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
@@ -725,6 +749,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
@@ -746,6 +771,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
@@ -767,6 +793,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;

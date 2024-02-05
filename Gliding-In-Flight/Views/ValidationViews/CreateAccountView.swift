@@ -16,6 +16,7 @@ struct CreateAccountView: View {
     func createAccountButtonAction() {
         
         // ***PUSH TO DATABASE***
+        // ALSO CHECK IF ALREADY EXISTS IN DATABASE
         
         let glider = Glider(id: id, name: name, currentLocation: nil, currentUpdate: nil, lastLocation: nil, lastUpdate: nil)
         Task {
@@ -24,6 +25,13 @@ struct CreateAccountView: View {
     }
     
     var body: some View {
+        if gliderStore.glider != nil {
+            if #available(iOS 17.0, *) {
+                GlidingMapView()
+            } else {
+                // Fallback on earlier versions
+            }
+        }
         VStack {
             TextTitle(text: "Please create new account credentials and submit to create an account")
             

@@ -24,8 +24,12 @@ struct LoginView: View {
     
     
     var body: some View {
-        if let unwrappedGlider = gliderStore.glider {
-            MapView()
+        if gliderStore.glider != nil {
+            if #available(iOS 17.0, *) {
+                GlidingMapView()
+            } else {
+                // Fallback on earlier versions
+            }
         } else {
             NavigationStack {
                 VStack {

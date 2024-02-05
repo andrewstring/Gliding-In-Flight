@@ -10,6 +10,7 @@ import CoreLocation
 
 class LocationSetup: NSObject, ObservableObject {
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
+    
     @Published var currentLocation: CLLocation?
     
     typealias CLLocationAccuracy = Double

@@ -50,6 +50,7 @@ class GliderStore: ObservableObject {
             guard let gliderURL = try? Self.gliderURL() else { return nil }
             guard let encodedGlider = try? JSONEncoder().encode(glider) else { return nil }
             try encodedGlider.write(to: gliderURL)
+            try await self.gliderLoad()
             return glider
         }
         return try await task.value

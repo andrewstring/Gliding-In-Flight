@@ -8,12 +8,12 @@
 import Foundation
 import CoreLocation
 
-class LocationSetup: NSObject, ObservableObject {
+class LocationModel: NSObject, ObservableObject {
     
     // Published variable declarations
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
-    @Published var currentLocation: CLLocation?
-    @Published var barometricAltitude: BarometricAltitude?
+    @Published var previousLocation: CLLocation?
+    @Published var newLocation: CLLocation?
     
     // Location Manager declaration
     var locationManager: CLLocationManager
@@ -30,7 +30,7 @@ class LocationSetup: NSObject, ObservableObject {
     }
 }
 
-extension LocationSetup: CLLocationManagerDelegate {
+extension LocationModel: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         /* Request always authorization for any situation in which
          user has not enabled this feature */
@@ -42,17 +42,14 @@ extension LocationSetup: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("UpdatedLocation")
-        self.currentLocation = self.getLatestLocation(locations)
+        self.previousLocation = self.newLocation
+        self.newLocation = self.getLatestLocation(locations)
     }
     
     func getLatestLocation(_ locations: [CLLocation]) -> CLLocation? {
         if locations.count == 0 {
             return nil
         }
-        
-        let previousLocation = self.currentLocation
-        let newLocation = locations[locations.count-1]
-        
         return locations[locations.count-1]
     }
 }

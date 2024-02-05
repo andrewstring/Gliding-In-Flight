@@ -9,13 +9,12 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var username: String = ""
-    @EnvironmentObject private var gliderStore: GliderStore
+    @EnvironmentObject var gliderStore: GliderStore
     
     
     private let signInButtonText = "SIGN IN"
     func signInButtonAction() {
         print("Sign In Button Action")
-        // Need to implement database fetch
     }
     private let createAccountButtonText = "CREATE ACCOUNT"
     func createAccountButtonAction() {
@@ -25,11 +24,7 @@ struct LoginView: View {
     
     var body: some View {
         if gliderStore.glider != nil {
-            if #available(iOS 17.0, *) {
-                GlidingMapView()
-            } else {
-                // Fallback on earlier versions
-            }
+            GlidingMapView()
         } else {
             NavigationStack {
                 VStack {

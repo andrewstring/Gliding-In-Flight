@@ -9,9 +9,10 @@ import Foundation
 
 struct Flight: Codable {
     let id: String
+    let name: String
     let glider: Glider
     let dateOfFlight: String
-    let locations: [Location?]
+    var locations: [Location?]
 }
 
 struct FlightResponse: Decodable {

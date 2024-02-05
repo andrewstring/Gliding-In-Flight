@@ -10,24 +10,16 @@ import MapKit
 
 struct GlidingMapKit: UIViewRepresentable {
     
-    enum MapState {
-        case preFlight
-        case inFlight
-        case postFlight
-    }
-    
-    
+    @EnvironmentObject var navigationModel: NavigationModel
     let mapView: MKMapView
-    let mapState: MapState
     
     init() {
         self.mapView = MKMapView()
         self.mapView.preferredConfiguration = MKImageryMapConfiguration()
-        self.mapState = .preFlight
     }
     
     func makeUIView(context: Context) -> MKMapView {
-        switch self.mapState {
+        switch navigationModel.mapState {
             case .preFlight:
                 print("PRE FLIGHT")
                 return self.mapView
@@ -41,7 +33,7 @@ struct GlidingMapKit: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        switch self.mapState {
+        switch navigationModel.mapState {
             case .preFlight:
                 print("PRE FLIGHT")
             case .inFlight:

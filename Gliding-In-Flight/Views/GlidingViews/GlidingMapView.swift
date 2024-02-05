@@ -9,20 +9,24 @@ import SwiftUI
 import MapKit
 
 struct GlidingMapView: View {
-    
-    let glidingMapKit = GlidingMapKit()
+    @EnvironmentObject var gliderStore: GliderStore
+    let glidingMapKit: GlidingMapKit = GlidingMapKit()
     
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                RouteNavbarView()
-                glidingMapKit
-                    .fixedSize(horizontal: false, vertical: false)
-                RouteStartStopView()
+        if gliderStore.glider != nil {
+            GeometryReader { geometry in
+                VStack {
+                    RouteNavbarView()
+                    glidingMapKit
+                        .fixedSize(horizontal: false, vertical: false)
+                    RouteStartStopView()
+                }
             }
+            .frame(maxHeight: .infinity)
+            .background(Color(.lightGray))
+        } else {
+            IssueWithDataView()
         }
-        .frame(maxHeight: .infinity)
-        .background(Color(.lightGray))
     }
 }
 

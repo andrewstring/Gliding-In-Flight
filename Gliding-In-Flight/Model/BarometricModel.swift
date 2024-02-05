@@ -8,7 +8,7 @@
 import Foundation
 import CoreMotion
 
-class BarometricAltitude: ObservableObject {
+class BarometricModel: ObservableObject {
     let operationQueue: OperationQueue
     let altimeter: CMAltimeter
     @Published var absoluteAltitude: Double?

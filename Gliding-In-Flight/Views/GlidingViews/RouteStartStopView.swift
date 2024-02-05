@@ -9,12 +9,16 @@ import SwiftUI
 
 struct RouteStartStopView: View {
     
+    @EnvironmentObject var navigationModel: NavigationModel
+    @EnvironmentObject var gliderStore: GliderStore
+    
     func startRoute() {
-        print("Start")
+        guard let glider = gliderStore.glider else { return }
+        navigationModel.startNavigation(glider: glider)
     }
     
     func stopRoute() {
-        print("Stop")
+        navigationModel.stopNavigation()
     }
     
     func startStopButton(_ text: String, action: @escaping () -> Void) -> some View {
@@ -31,9 +35,9 @@ struct RouteStartStopView: View {
         VStack {
             HStack {
                 Spacer()
-                self.startStopButton( "Start\nFlight", action: {print("JKL")})
+                self.startStopButton( "Start\nFlight", action: self.startRoute)
                 Spacer()
-                self.startStopButton("Stop\nFlight", action: {print("JKL")})
+                self.startStopButton("Stop\nFlight", action: self.stopRoute)
                 Spacer()
             }
             .frame(maxWidth: .infinity)

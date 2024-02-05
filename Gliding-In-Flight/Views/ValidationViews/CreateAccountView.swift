@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CreateAccountView: View {
-    @EnvironmentObject private var gliderStore: GliderStore
+    
+    @EnvironmentObject var gliderStore: GliderStore
     @State var id: String = ""
     @State var name: String = ""
     
@@ -26,21 +27,18 @@ struct CreateAccountView: View {
     
     var body: some View {
         if gliderStore.glider != nil {
-            if #available(iOS 17.0, *) {
-                GlidingMapView()
-            } else {
-                // Fallback on earlier versions
+            GlidingMapView()
+        } else {
+            VStack {
+                TextTitle(text: "Please create new account credentials and submit to create an account")
+                
+                TextFieldInput(placeholder: "Username", text: $id)
+                TextFieldInput(placeholder: "Name", text: $name)
+                
+                ButtonSubmit(onClick: createAccountButtonAction, text: createAccountButtonText)
             }
+            .multilineTextAlignment(.center)
         }
-        VStack {
-            TextTitle(text: "Please create new account credentials and submit to create an account")
-            
-            TextFieldInput(placeholder: "Username", text: $id)
-            TextFieldInput(placeholder: "Name", text: $name)
-            
-            ButtonSubmit(onClick: createAccountButtonAction, text: createAccountButtonText)
-        }
-        .multilineTextAlignment(.center)
     }
 }
 

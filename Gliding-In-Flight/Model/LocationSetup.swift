@@ -13,6 +13,7 @@ class LocationSetup: NSObject, ObservableObject {
     // Published variable declarations
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var currentLocation: CLLocation?
+    @Published var barometricAltitude: BarometricAltitude?
     
     // Location Manager declaration
     var locationManager: CLLocationManager
@@ -51,8 +52,6 @@ extension LocationSetup: CLLocationManagerDelegate {
         
         let previousLocation = self.currentLocation
         let newLocation = locations[locations.count-1]
-        
-        
         
         return locations[locations.count-1]
     }

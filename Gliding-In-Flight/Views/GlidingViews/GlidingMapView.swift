@@ -13,12 +13,16 @@ struct GlidingMapView: View {
     let glidingMapKit = GlidingMapKit()
     
     var body: some View {
-        ZStack {
-            O
-            glidingMapKit
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            RouteStartStop()
+        GeometryReader { geometry in
+            VStack {
+                RouteNavbarView()
+                glidingMapKit
+                    .fixedSize(horizontal: false, vertical: false)
+                RouteStartStopView()
+            }
         }
+        .frame(maxHeight: .infinity)
+        .background(Color(.lightGray))
     }
 }
 

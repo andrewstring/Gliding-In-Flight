@@ -16,7 +16,7 @@
 		49260BCE2B6DDFFE00CA644F /* TextTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BCD2B6DDFFE00CA644F /* TextTitle.swift */; };
 		49260BD02B6DE07000CA644F /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BCF2B6DE07000CA644F /* TextFieldInput.swift */; };
 		49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49288E6B2B621A5300F6E6DF /* APIBase.swift */; };
-		4934BB2E2B70509D00F55BAE /* RouteStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2D2B70509D00F55BAE /* RouteStartStop.swift */; };
+		4934BB2E2B70509D00F55BAE /* RouteStartStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2D2B70509D00F55BAE /* RouteStartStopView.swift */; };
 		4934BB302B705F4800F55BAE /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2F2B705F4800F55BAE /* NavigationModel.swift */; };
 		494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494182B32B704B8500B49324 /* GlidingMapView.swift */; };
 		495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F432D2B6B3396008BB485 /* GliderStore.swift */; };
@@ -45,6 +45,9 @@
 		49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E22B6AF31100B5F368 /* Location.swift */; };
 		49C1C4E52B6AFDA600B5F368 /* ObjectGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */; };
 		49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */; };
+		49E655AD2B7096CC0001F74E /* AltitudeComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655AC2B7096CC0001F74E /* AltitudeComparison.swift */; };
+		49E655AF2B70974F0001F74E /* BarometricAltitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655AE2B70974F0001F74E /* BarometricAltitude.swift */; };
+		49E655B12B7098140001F74E /* RouteNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655B02B7098140001F74E /* RouteNavbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +77,7 @@
 		49260BCD2B6DDFFE00CA644F /* TextTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTitle.swift; sourceTree = "<group>"; };
 		49260BCF2B6DE07000CA644F /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
 		49288E6B2B621A5300F6E6DF /* APIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBase.swift; sourceTree = "<group>"; };
-		4934BB2D2B70509D00F55BAE /* RouteStartStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStartStop.swift; sourceTree = "<group>"; };
+		4934BB2D2B70509D00F55BAE /* RouteStartStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStartStopView.swift; sourceTree = "<group>"; };
 		4934BB2F2B705F4800F55BAE /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
 		494182B32B704B8500B49324 /* GlidingMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapView.swift; sourceTree = "<group>"; };
 		495F432D2B6B3396008BB485 /* GliderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GliderStore.swift; sourceTree = "<group>"; };
@@ -108,6 +111,9 @@
 		49C1C4E22B6AF31100B5F368 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectGenerator.swift; sourceTree = "<group>"; };
 		49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedIOS.swift; sourceTree = "<group>"; };
+		49E655AC2B7096CC0001F74E /* AltitudeComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeComparison.swift; sourceTree = "<group>"; };
+		49E655AE2B70974F0001F74E /* BarometricAltitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricAltitude.swift; sourceTree = "<group>"; };
+		49E655B02B7098140001F74E /* RouteNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteNavbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 			children = (
 				49260BC72B6DD5B100CA644F /* LocationSetup.swift */,
 				4934BB2F2B705F4800F55BAE /* NavigationModel.swift */,
+				49E655AE2B70974F0001F74E /* BarometricAltitude.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,9 +217,10 @@
 		498ED61D2B6DFB6D001984C6 /* GlidingViews */ = {
 			isa = PBXGroup;
 			children = (
-				4934BB2D2B70509D00F55BAE /* RouteStartStop.swift */,
+				4934BB2D2B70509D00F55BAE /* RouteStartStopView.swift */,
 				49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */,
 				494182B32B704B8500B49324 /* GlidingMapView.swift */,
+				49E655B02B7098140001F74E /* RouteNavbarView.swift */,
 			);
 			path = GlidingViews;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
+				49E655AB2B7096BC0001F74E /* TESTING */,
 				49BAE8E02B704C7B003B2020 /* Info.plist */,
 				49260BC62B6DD5A300CA644F /* Model */,
 				499209392B69E99000A9A2CD /* Util */,
@@ -318,6 +327,14 @@
 				499658A12B5DA75700ACCAF7 /* Gliding_In_FlightUITestsLaunchTests.swift */,
 			);
 			path = "Gliding-In-FlightUITests";
+			sourceTree = "<group>";
+		};
+		49E655AB2B7096BC0001F74E /* TESTING */ = {
+			isa = PBXGroup;
+			children = (
+				49E655AC2B7096CC0001F74E /* AltitudeComparison.swift */,
+			);
+			path = TESTING;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,7 +474,7 @@
 				494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */,
 				49A5E8042B68940D00B08107 /* Config.swift in Sources */,
 				49260BC82B6DD5B100CA644F /* LocationSetup.swift in Sources */,
-				4934BB2E2B70509D00F55BAE /* RouteStartStop.swift in Sources */,
+				4934BB2E2B70509D00F55BAE /* RouteStartStopView.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
 				49260BD02B6DE07000CA644F /* TextFieldInput.swift in Sources */,
 				499209342B69CF9700A9A2CD /* Glider.swift in Sources */,
@@ -470,13 +487,16 @@
 				49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */,
 				4934BB302B705F4800F55BAE /* NavigationModel.swift in Sources */,
 				49962B3B2B6F57A7008FE6F7 /* GlidingMapKit.swift in Sources */,
+				49E655B12B7098140001F74E /* RouteNavbarView.swift in Sources */,
 				49260BBD2B6DAFA400CA644F /* LoginView.swift in Sources */,
 				495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */,
+				49E655AF2B70974F0001F74E /* BarometricAltitude.swift in Sources */,
 				4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */,
 				49B7F8B52B6C5B8300C2B6B1 /* FlightStore.swift in Sources */,
 				49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */,
 				49260BCC2B6DDFD700CA644F /* CreateAccountView.swift in Sources */,
 				499C41D02B61DB0900FE42BA /* TESTER.swift in Sources */,
+				49E655AD2B7096CC0001F74E /* AltitudeComparison.swift in Sources */,
 				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
 				49260BCE2B6DDFFE00CA644F /* TextTitle.swift in Sources */,
 				49C1C4E52B6AFDA600B5F368 /* ObjectGenerator.swift in Sources */,

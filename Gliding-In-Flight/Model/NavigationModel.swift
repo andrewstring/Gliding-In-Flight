@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct NavigationModel {
+    static func altitudeCrossesThreshold() {
+        return
+    }
+}

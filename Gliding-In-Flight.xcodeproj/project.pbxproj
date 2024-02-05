@@ -170,7 +170,7 @@
 		494C51142B5EF8C10023E176 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				498ED61D2B6DFB6D001984C6 /* NavigationViews */,
+				498ED61D2B6DFB6D001984C6 /* GlidingViews */,
 				498ED61C2B6DFB2E001984C6 /* BlockedViews */,
 				498ED61B2B6DFB12001984C6 /* ValidationViews */,
 				49260BBF2B6DC2D900CA644F /* Standard Components */,
@@ -207,14 +207,14 @@
 			path = BlockedViews;
 			sourceTree = "<group>";
 		};
-		498ED61D2B6DFB6D001984C6 /* NavigationViews */ = {
+		498ED61D2B6DFB6D001984C6 /* GlidingViews */ = {
 			isa = PBXGroup;
 			children = (
 				4934BB2D2B70509D00F55BAE /* RouteStartStop.swift */,
 				49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */,
 				494182B32B704B8500B49324 /* GlidingMapView.swift */,
 			);
-			path = NavigationViews;
+			path = GlidingViews;
 			sourceTree = "<group>";
 		};
 		498ED61E2B6E0832001984C6 /* ADSB */ = {

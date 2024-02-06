@@ -10,14 +10,14 @@ import MapKit
 
 struct GlidingMapView: View {
     @EnvironmentObject var gliderStore: GliderStore
-    let glidingMapKit: GlidingMapKit = GlidingMapKit()
+    let glidingMapViewRepresentable: GlidingMapViewRepresentable = GlidingMapViewRepresentable()
     
     var body: some View {
         if gliderStore.glider != nil {
             GeometryReader { geometry in
                 VStack {
                     RouteNavbarView()
-                    glidingMapKit
+                    glidingMapViewRepresentable
                         .fixedSize(horizontal: false, vertical: false)
                     RouteStartStopView()
                 }

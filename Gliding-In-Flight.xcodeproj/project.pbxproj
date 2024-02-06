@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49196E662B7180A400574C5C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49196E652B7180A400574C5C /* Model.swift */; };
 		49196E682B718C6600574C5C /* IssueWithDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49196E672B718C6600574C5C /* IssueWithDataView.swift */; };
+		4922A8E32B71B4D700202483 /* CoreGPX in Frameworks */ = {isa = PBXBuildFile; productRef = 4922A8E22B71B4D700202483 /* CoreGPX */; };
+		4922A8E82B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922A8E72B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift */; };
 		49260BBD2B6DAFA400CA644F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BBC2B6DAFA400CA644F /* LoginView.swift */; };
 		49260BC32B6DC2FD00CA644F /* ButtonSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BC22B6DC2FD00CA644F /* ButtonSubmit.swift */; };
 		49260BC52B6DD4C300CA644F /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BC42B6DD4C300CA644F /* RequestLocationView.swift */; };
@@ -28,7 +30,7 @@
 		499209362B69CF9F00A9A2CD /* Thermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209352B69CF9F00A9A2CD /* Thermal.swift */; };
 		499209382B69CFA400A9A2CD /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209372B69CFA400A9A2CD /* Flight.swift */; };
 		4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992093C2B69E9AF00A9A2CD /* DateTime.swift */; };
-		49962B3B2B6F57A7008FE6F7 /* GlidingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */; };
+		49962B3B2B6F57A7008FE6F7 /* GlidingMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49962B3A2B6F57A7008FE6F7 /* GlidingMapViewRepresentable.swift */; };
 		4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */; };
 		499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499658802B5DA75200ACCAF7 /* Persistence.swift */; };
 		499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */; };
@@ -43,6 +45,7 @@
 		49A5E8022B68928200B08107 /* APIThermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E8012B68928200B08107 /* APIThermal.swift */; };
 		49A5E8042B68940D00B08107 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E8032B68940D00B08107 /* Config.swift */; };
 		49B7F8B52B6C5B8300C2B6B1 /* FlightStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F8B42B6C5B8300C2B6B1 /* FlightStore.swift */; };
+		49B8B2A92B71B27400A40E3C /* GPSTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8B2A82B71B27400A40E3C /* GPSTesting.swift */; };
 		49C1C4E12B6AEC3A00B5F368 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E02B6AEC3A00B5F368 /* APIError.swift */; };
 		49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E22B6AF31100B5F368 /* Location.swift */; };
 		49C1C4E52B6AFDA600B5F368 /* ObjectGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */; };
@@ -72,6 +75,9 @@
 /* Begin PBXFileReference section */
 		49196E652B7180A400574C5C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		49196E672B718C6600574C5C /* IssueWithDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueWithDataView.swift; sourceTree = "<group>"; };
+		4922A8E42B71B57800202483 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		4922A8E52B71B5A300202483 /* fells_loop.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = fells_loop.gpx; path = ../../Downloads/fells_loop.gpx; sourceTree = "<group>"; };
+		4922A8E72B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		49260BBC2B6DAFA400CA644F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49260BC22B6DC2FD00CA644F /* ButtonSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSubmit.swift; sourceTree = "<group>"; };
 		49260BC42B6DD4C300CA644F /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
@@ -91,7 +97,7 @@
 		499209352B69CF9F00A9A2CD /* Thermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermal.swift; sourceTree = "<group>"; };
 		499209372B69CFA400A9A2CD /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		4992093C2B69E9AF00A9A2CD /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
-		49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapKit.swift; sourceTree = "<group>"; };
+		49962B3A2B6F57A7008FE6F7 /* GlidingMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapViewRepresentable.swift; sourceTree = "<group>"; };
 		4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gliding-In-Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4996587E2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gliding_In_FlightApp.swift; sourceTree = "<group>"; };
 		499658802B5DA75200ACCAF7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 		49A5E8012B68928200B08107 /* APIThermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIThermal.swift; sourceTree = "<group>"; };
 		49A5E8032B68940D00B08107 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		49B7F8B42B6C5B8300C2B6B1 /* FlightStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStore.swift; sourceTree = "<group>"; };
+		49B8B2A82B71B27400A40E3C /* GPSTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSTesting.swift; sourceTree = "<group>"; };
 		49BAE8E02B704C7B003B2020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49C1C4E02B6AEC3A00B5F368 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		49C1C4E22B6AF31100B5F368 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -125,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4922A8E32B71B4D700202483 /* CoreGPX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4922A8E62B71D7F300202483 /* MapRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				49962B3A2B6F57A7008FE6F7 /* GlidingMapViewRepresentable.swift */,
+				4922A8E72B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift */,
+			);
+			path = MapRepresentables;
+			sourceTree = "<group>";
+		};
 		49260BBF2B6DC2D900CA644F /* StandardComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				4934BB2D2B70509D00F55BAE /* RouteStartStopView.swift */,
-				49962B3A2B6F57A7008FE6F7 /* GlidingMapKit.swift */,
 				494182B32B704B8500B49324 /* GlidingMapView.swift */,
 				49E655B02B7098140001F74E /* RouteNavbarView.swift */,
 				49196E672B718C6600574C5C /* IssueWithDataView.swift */,
@@ -274,6 +290,8 @@
 		499658722B5DA75200ACCAF7 = {
 			isa = PBXGroup;
 			children = (
+				4922A8E52B71B5A300202483 /* fells_loop.gpx */,
+				4922A8E42B71B57800202483 /* TestPlan.xctestplan */,
 				4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */,
 				499658942B5DA75700ACCAF7 /* Gliding-In-FlightTests */,
 				4996589E2B5DA75700ACCAF7 /* Gliding-In-FlightUITests */,
@@ -294,7 +312,8 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
-				49E655AB2B7096BC0001F74E /* TESTING */,
+				4922A8E62B71D7F300202483 /* MapRepresentables */,
+				49E655AB2B7096BC0001F74E /* Testing */,
 				49BAE8E02B704C7B003B2020 /* Info.plist */,
 				49260BC62B6DD5A300CA644F /* Model */,
 				499209392B69E99000A9A2CD /* Util */,
@@ -335,12 +354,13 @@
 			path = "Gliding-In-FlightUITests";
 			sourceTree = "<group>";
 		};
-		49E655AB2B7096BC0001F74E /* TESTING */ = {
+		49E655AB2B7096BC0001F74E /* Testing */ = {
 			isa = PBXGroup;
 			children = (
 				49E655AC2B7096CC0001F74E /* AltitudeComparison.swift */,
+				49B8B2A82B71B27400A40E3C /* GPSTesting.swift */,
 			);
-			path = TESTING;
+			path = Testing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +379,9 @@
 			dependencies = (
 			);
 			name = "Gliding-In-Flight";
+			packageProductDependencies = (
+				4922A8E22B71B4D700202483 /* CoreGPX */,
+			);
 			productName = "Gliding-In-Flight";
 			productReference = 4996587B2B5DA75200ACCAF7 /* Gliding-In-Flight.app */;
 			productType = "com.apple.product-type.application";
@@ -431,6 +454,9 @@
 				Base,
 			);
 			mainGroup = 499658722B5DA75200ACCAF7;
+			packageReferences = (
+				4922A8E12B71B4D700202483 /* XCRemoteSwiftPackageReference "CoreGPX" */,
+			);
 			productRefGroup = 4996587C2B5DA75200ACCAF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -487,16 +513,18 @@
 				49A5E8022B68928200B08107 /* APIThermal.swift in Sources */,
 				49260BC52B6DD4C300CA644F /* RequestLocationView.swift in Sources */,
 				49A5E7FE2B68927400B08107 /* APIGlider.swift in Sources */,
+				4922A8E82B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift in Sources */,
 				49260BC32B6DC2FD00CA644F /* ButtonSubmit.swift in Sources */,
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499209382B69CFA400A9A2CD /* Flight.swift in Sources */,
 				49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */,
 				4934BB302B705F4800F55BAE /* NavigationModel.swift in Sources */,
-				49962B3B2B6F57A7008FE6F7 /* GlidingMapKit.swift in Sources */,
+				49962B3B2B6F57A7008FE6F7 /* GlidingMapViewRepresentable.swift in Sources */,
 				49E655B12B7098140001F74E /* RouteNavbarView.swift in Sources */,
 				49260BBD2B6DAFA400CA644F /* LoginView.swift in Sources */,
 				495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */,
 				49E655AF2B70974F0001F74E /* BarometricModel.swift in Sources */,
+				49B8B2A92B71B27400A40E3C /* GPSTesting.swift in Sources */,
 				4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */,
 				49B7F8B52B6C5B8300C2B6B1 /* FlightStore.swift in Sources */,
 				49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */,
@@ -877,6 +905,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4922A8E12B71B4D700202483 /* XCRemoteSwiftPackageReference "CoreGPX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vincentneo/CoreGPX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4922A8E22B71B4D700202483 /* CoreGPX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4922A8E12B71B4D700202483 /* XCRemoteSwiftPackageReference "CoreGPX" */;
+			productName = CoreGPX;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		499658822B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld */ = {

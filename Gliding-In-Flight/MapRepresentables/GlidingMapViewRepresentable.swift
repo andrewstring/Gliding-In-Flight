@@ -8,17 +8,25 @@
 import SwiftUI
 import MapKit
 
-struct GlidingMapKit: UIViewRepresentable {
+struct GlidingMapViewRepresentable: UIViewRepresentable {
     
     @EnvironmentObject var navigationModel: NavigationModel
+    @EnvironmentObject var locationModel: LocationModel
     let mapView: MKMapView
+    let currentLocationAnnotation: MKAnnotation?
     
     init() {
         self.mapView = MKMapView()
         self.mapView.preferredConfiguration = MKImageryMapConfiguration()
+        self.currentLocationAnnotation = nil
     }
     
     func makeUIView(context: Context) -> MKMapView {
+        if let centerCoordinate = locationModel.newLocation?.coordinate {
+            self.mapView.centerCoordinate = centerCoordinate
+            self.mapView.showsUserLocation = true
+            self.mapView.addAnnotation(MKPointAnnotation(__coordinate: centerCoordinate, title: "jkl", subtitle: "jkl"))
+        }
         switch navigationModel.mapState {
             case .preFlight:
                 print("PRE FLIGHT")

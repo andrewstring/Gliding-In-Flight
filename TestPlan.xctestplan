@@ -1,0 +1,21 @@
+{
+  "configurations" : [
+    {
+      "id" : "200CAEAB-C7E3-4F3B-8BBC-C1D3AE35E787",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "locationScenario" : {
+      "identifier" : "..\/..\/..\/..\/Downloads\/fells_loop.gpx"
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+
+  ],
+  "version" : 1
+}

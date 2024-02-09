@@ -17,7 +17,7 @@ class NavigationModel: ObservableObject {
     @Published var mapState: MapState
     let flightStore = FlightStore()
     
-    var flight: Flight?
+    @Published var flight: Flight?
     var locationModel = LocationModel(activityType: .automotiveNavigation)
     
     init() {

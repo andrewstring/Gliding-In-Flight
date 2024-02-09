@@ -10,6 +10,7 @@ import MapKit
 
 struct GlidingMapView: View {
     @EnvironmentObject var gliderStore: GliderStore
+    @EnvironmentObject var navigationModel: NavigationModel
     var content: String?
     
     let glidingMapViewRepresentable: GlidingMapViewRepresentable = GlidingMapViewRepresentable()
@@ -19,12 +20,12 @@ struct GlidingMapView: View {
             GeometryReader { geometry in
                 VStack {
                     RouteNavbarView()
-//                    glidingMapViewRepresentable
                     ScrollView {
-                        Text(content)
+                        Text(String(describing: navigationModel.flight ?? nil))
                             .lineLimit(nil)
                             .frame(width: geometry.size.width)
                     }
+//                    glidingMapViewRepresentable
 //                        .fixedSize(horizontal: false, vertical: false)
                     RouteStartStopView()
                 }

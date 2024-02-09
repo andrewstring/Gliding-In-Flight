@@ -14,8 +14,8 @@ class LocationModel: NSObject, ObservableObject {
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var previousLocation: CLLocation?
     @Published var newLocation: CLLocation?
-    private var flight: Flight?
-    private var navigationModel: NavigationModel?
+    var flight: Flight?
+    var navigationModel: NavigationModel?
     
     // Location Manager declaration
     var locationManager: CLLocationManager
@@ -30,21 +30,11 @@ class LocationModel: NSObject, ObservableObject {
         
         self.locationManager.delegate = self
     }
-    init(activityType: CLActivityType, flight: Flight, navigationModel: NavigationModel) {
-        // Set location manager and location manager configuration
-        self.locationManager = CLLocationManager()
-        self.locationManager.activityType = activityType
-        
-        super.init()
-        
-        self.locationManager.delegate = self
-        self.flight = flight
-        self.navigationModel = navigationModel
-    }
 }
 
 extension LocationModel: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        print("AUTHORIZATION")
         /* Request always authorization for any situation in which
          user has not enabled this feature */
         self.locationAuthorizationStatus = manager.authorizationStatus
@@ -58,9 +48,9 @@ extension LocationModel: CLLocationManagerDelegate {
         self.previousLocation = self.newLocation
         self.newLocation = self.getLatestLocation(locations)
         
-        guard let flightUnwrapped = self.flight else { return }
-        guard let navigationModelUnwrapped = self.navigationModel else { return }
-        guard let newLocationUnwrapped = self.newLocation else { return }
+        guard let flightUnwrapped = self.flight else { print("N1");return }
+        guard let navigationModelUnwrapped = self.navigationModel else { print("N2");return }
+        guard let newLocationUnwrapped = self.newLocation else { print("N3");return }
         
         let location = Location(
             latitude: newLocationUnwrapped.coordinate.latitude,

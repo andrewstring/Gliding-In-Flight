@@ -18,7 +18,7 @@ class NavigationModel: ObservableObject {
     let flightStore = FlightStore()
     
     var flight: Flight?
-    var locationModel: LocationModel?
+    var locationModel = LocationModel(activityType: .automotiveNavigation)
     
     init() {
         self.mapState = MapState.preFlight
@@ -34,6 +34,8 @@ class NavigationModel: ObservableObject {
     }
     
     func addNewLocationToFlight(newLocation: Location) {
+        print("NEW LOCATION")
+        print(newLocation)
         self.flight?.locations.append(newLocation)
     }
     
@@ -41,7 +43,9 @@ class NavigationModel: ObservableObject {
         self.mapState = MapState.inFlight
         self.createFlight(glider: glider)
         if self.flight != nil {
-            let navigationModel = LocationModel(activityType: .automotiveNavigation, flight: self.flight!, navigationModel: self)
+            locationModel.flight = self.flight
+            locationModel.navigationModel = self
+            locationModel.locationManager.startUpdatingLocation()
         }
         print("STARTED NAVBIGATION")
     }

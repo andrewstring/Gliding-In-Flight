@@ -9,10 +9,10 @@ import Foundation
 
 // Handles the persistent storage of the flight
 class FlightStore: ObservableObject {
-    @Published var flights: [Flight]
+    @Published var flight: Flight?
     
     init() {
-        self.flights = []
+        self.flight = nil
     }
         
     private static func flightURL() throws -> URL? {
@@ -32,13 +32,15 @@ class FlightStore: ObservableObject {
     }
     
     func flightsLoad() async throws {
-        let task = Task<[Flight], Error> {
-            guard let flightURL = try? Self.flightURL() else { return [] }
-            guard let flightData = try? Data(contentsOf: flightURL) else { return [] }
-            guard let decodedFlightData = try? JSONDecoder().decode([Flight].self, from: flightData) else { return [] }
+        let task = Task<Flight?, Error> {
+            guard let flightURL = try? Self.flightURL() else { print("1"); return nil }
+            guard let flightData = try? Data(contentsOf: flightURL) else { print("2"); return nil }
+            print("FLIGHT DATA")
+            print(flightData)
+            guard let decodedFlightData = try? JSONDecoder().decode(Flight.self, from: flightData) else { print("3"); return nil }
             return decodedFlightData
         }
-        self.flights = try await task.value
+        self.flight = try await task.value
     }
     
     func flightSave(flight: Flight) async throws -> Flight? {

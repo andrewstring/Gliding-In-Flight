@@ -13,6 +13,8 @@ struct RouteStartStopView: View {
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var gliderStore: GliderStore
     
+    var flightStore = FlightStore()
+    
     func startRoute() {
         guard let glider = gliderStore.glider else { return }
         navigationModel.startNavigation(glider: glider)
@@ -25,7 +27,11 @@ struct RouteStartStopView: View {
     }
     
     func sendRoute() {
-        
+        Task {
+            try await self.flightStore.flightsLoad()
+            print("Flight OUTPUT")
+            print(self.flightStore.flight)
+        }
     }
     
     func startStopButton(_ text: String, action: @escaping () -> Void) -> some View {

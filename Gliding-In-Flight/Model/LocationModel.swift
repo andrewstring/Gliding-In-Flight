@@ -14,6 +14,8 @@ class LocationModel: NSObject, ObservableObject {
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var previousLocation: CLLocation?
     @Published var newLocation: CLLocation?
+    private var flight: Flight?
+    private var navigationModel: NavigationModel?
     
     // Location Manager declaration
     var locationManager: CLLocationManager
@@ -27,6 +29,17 @@ class LocationModel: NSObject, ObservableObject {
         super.init()
         
         self.locationManager.delegate = self
+    }
+    init(activityType: CLActivityType, flight: Flight, navigationModel: NavigationModel) {
+        // Set location manager and location manager configuration
+        self.locationManager = CLLocationManager()
+        self.locationManager.activityType = activityType
+        
+        super.init()
+        
+        self.locationManager.delegate = self
+        self.flight = flight
+        self.navigationModel = navigationModel
     }
 }
 
@@ -44,6 +57,21 @@ extension LocationModel: CLLocationManagerDelegate {
         print("UpdatedLocation")
         self.previousLocation = self.newLocation
         self.newLocation = self.getLatestLocation(locations)
+        
+        guard let flightUnwrapped = self.flight else { return }
+        guard let navigationModelUnwrapped = self.navigationModel else { return }
+        guard let newLocationUnwrapped = self.newLocation else { return }
+        
+        let location = Location(
+            latitude: newLocationUnwrapped.coordinate.latitude,
+            longitude: newLocationUnwrapped.coordinate.longitude,
+            altitude: newLocationUnwrapped.altitude,
+            absoluteAltitude: nil,
+            relativeAltitude: nil,
+            speed: newLocationUnwrapped.speed
+        )
+        
+        navigationModelUnwrapped.addNewLocationToFlight(newLocation: location)
     }
     
     func getLatestLocation(_ locations: [CLLocation]) -> CLLocation? {

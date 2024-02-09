@@ -15,8 +15,10 @@ enum MapState {
 
 class NavigationModel: ObservableObject {
     @Published var mapState: MapState
+    let flightStore = FlightStore()
     
     var flight: Flight?
+    var locationModel: LocationModel?
     
     init() {
         self.mapState = MapState.preFlight
@@ -38,13 +40,21 @@ class NavigationModel: ObservableObject {
     func startNavigation(glider: Glider) {
         self.mapState = MapState.inFlight
         self.createFlight(glider: glider)
+        if self.flight != nil {
+            let navigationModel = LocationModel(activityType: .automotiveNavigation, flight: self.flight!, navigationModel: self)
+        }
         print("STARTED NAVBIGATION")
-        print(self.flight)
     }
     
     
     
-    func stopNavigation() {
-        self.mapState = MapState.postFlight
+    func stopNavigation() async {
+        do {
+            self.mapState = MapState.postFlight
+            guard let flightUnwrapped = self.flight else { return }
+            try await self.flightStore.flightSave(flight: flightUnwrapped)
+        } catch {
+            print("ERRORED OUT")
+        }
     }
 }

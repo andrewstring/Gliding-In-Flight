@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct GlidingMapViewControllerRepresentable: UIViewControllerRepresentable {
-    
-    
-}
+//struct GlidingMapViewControllerRepresentable: UIViewControllerRepresentable {
+//    
+//    
+//}

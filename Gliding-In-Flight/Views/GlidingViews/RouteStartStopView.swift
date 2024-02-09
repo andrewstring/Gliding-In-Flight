@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 struct RouteStartStopView: View {
     
     @EnvironmentObject var navigationModel: NavigationModel
@@ -18,7 +19,13 @@ struct RouteStartStopView: View {
     }
     
     func stopRoute() {
-        navigationModel.stopNavigation()
+        Task {
+            await navigationModel.stopNavigation()
+        }
+    }
+    
+    func sendRoute() {
+        
     }
     
     func startStopButton(_ text: String, action: @escaping () -> Void) -> some View {
@@ -38,6 +45,8 @@ struct RouteStartStopView: View {
                 self.startStopButton( "Start\nFlight", action: self.startRoute)
                 Spacer()
                 self.startStopButton("Stop\nFlight", action: self.stopRoute)
+                Spacer()
+                self.startStopButton( "Send\nFlight", action: self.sendRoute)
                 Spacer()
             }
             .frame(maxWidth: .infinity)

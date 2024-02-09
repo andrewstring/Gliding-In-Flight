@@ -55,4 +55,15 @@ class GliderStore: ObservableObject {
         }
         return try await task.value
     }
+    
+    @MainActor
+    func gliderRemove() async throws -> Void {
+        let task = Task<Void, Error> {
+            guard let gliderURL = try? Self.gliderURL() else { return }
+            let emptyGlider = Data()
+            try emptyGlider.write(to: gliderURL)
+            return
+        }
+        return try await task.value
+    }
 }

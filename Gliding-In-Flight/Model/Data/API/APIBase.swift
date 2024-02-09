@@ -68,6 +68,7 @@ struct APIBase {
             print(data)
             return
         }
+        task.resume()
     }
     
     static func deleteRequest(path: String, data: Encodable? = nil) {
@@ -85,6 +86,7 @@ struct APIBase {
             print(data)
             return
         }
+        task.resume()
     }
     
 }

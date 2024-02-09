@@ -29,8 +29,6 @@ struct RouteStartStopView: View {
     func sendRoute() {
         Task {
             try await self.flightStore.flightsLoad()
-            print("Flight OUTPUT")
-            print(self.flightStore.flight)
         }
     }
     

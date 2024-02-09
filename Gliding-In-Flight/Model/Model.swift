@@ -24,7 +24,5 @@ class Model: ObservableObject {
         self.barometricModel = BarometricModel()
         
         self.gliderStore = GliderStore()
-        print("GLIDER")
-        print(self.gliderStore.glider)
     }
 }

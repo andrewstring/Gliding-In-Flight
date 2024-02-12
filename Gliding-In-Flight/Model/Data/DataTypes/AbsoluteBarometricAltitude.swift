@@ -8,7 +8,7 @@
 import Foundation
 import CoreMotion
 
-struct BarometricAltitude: Codable {
+struct AbsoluteBarometricAltitude: Codable {
     // Absolute Altitude Data
     var absoluteAltitude: Double?
     var absoluteAccuracy: Double?
@@ -21,5 +21,5 @@ struct BarometricAltitude: Codable {
 
 struct BarometricAltitudeResponse: Decodable {
     let message: String
-    let data: BarometricAltitude?
+    let data: AbsoluteBarometricAltitude?
 }

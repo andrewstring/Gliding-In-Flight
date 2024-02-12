@@ -7,31 +7,26 @@
 
 import Foundation
 
-struct Flight: Codable {
+class Flight: Codable {
     let id: String
     let name: String
     let glider: Glider
     let dateOfFlight: String
-    var locations: [Location?]
+    var locations: [Location]
+    var barometricAltitudes: [BarometricAltitude]
+    
+    init(id: String, name: String, glider: Glider, dateOfFlight: String,
+         locations: [Location], barometricAltitudes: [BarometricAltitude]) {
+        self.id = id
+        self.name = name
+        self.glider = glider
+        self.dateOfFlight = dateOfFlight
+        self.locations = locations
+        self.barometricAltitudes = barometricAltitudes
+    }
 }
 
 struct FlightResponse: Decodable {
     let message: String
     let data: Flight?
 }
-
-
-
-//struct FlightEncodable: Flight, Encodable {
-//    let id: String
-//    let glider: GliderEncodable
-//    let dateOfFlight: String
-//    let locations: [LocationEncodable?]
-//}
-//
-//struct FlightDecodable: Decodable {
-//    let id: String
-//    let glider: GliderDecodable
-//    let dateOfFlight: String
-//    let locations: [LocationDecodable?]
-//}

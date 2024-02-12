@@ -1,41 +1,44 @@
 //
-//  BarometricAltitude.swift
+//  BarometricModel.swift
 //  Gliding-In-Flight
 //
-//  Created by Andrew Stringfellow on 2/4/24.
+//  Created by Andrew Stringfellow on 2/12/24.
 //
 
 import Foundation
 import CoreMotion
 
 class BarometricModel: ObservableObject {
+    @Published var absoluteAltitude: Double?
+    @Published var absoluteAccuracy: Double?
+    @Published var absolutePrecision: Double?
+    @Published var relativeAltitude: Double?
+    @Published var relativePressure: Double?
+    
     let operationQueue: OperationQueue
     let altimeter: CMAltimeter
-    @Published var absoluteAltitude: Double?
-    @Published var relativeAltitude: Double?
-    
     
     init() {
         self.operationQueue = OperationQueue()
         self.altimeter = CMAltimeter()
         self.startAbsoluteAltitudeRecording()
         self.startRelativeAltitudeRecording()
-        
     }
     
     func startAbsoluteAltitudeRecording() {
         if CMAltimeter.isAbsoluteAltitudeAvailable() {
             self.altimeter.startAbsoluteAltitudeUpdates(to: self.operationQueue, withHandler: handleAbsoluteAltitudeUpdate)
-            
         }
     }
     func handleAbsoluteAltitudeUpdate(_ absoluteAltitudeData: CMAbsoluteAltitudeData?, _ errorOpt: (any Error)?) {
         if let error = errorOpt {
-            print("ERROR")
+            print("handleAbsoluteAltitudeUpdate error")
             print(error.localizedDescription)
             return
         }
         self.absoluteAltitude = absoluteAltitudeData?.altitude
+        self.absoluteAccuracy = absoluteAltitudeData?.accuracy
+        self.absolutePrecision = absoluteAltitudeData?.precision
     }
     
     func startRelativeAltitudeRecording() {
@@ -45,10 +48,11 @@ class BarometricModel: ObservableObject {
     }
     func handleRelativeAltitudeUpdate(_ altitudeData: CMAltitudeData?, _ errorOpt: (any Error)?) {
         if let error = errorOpt {
-            print("ERROR")
+            print("handleRelativeAltitudeUpdate error")
             print(error.localizedDescription)
             return
         }
-        self.relativeAltitude = altitudeData?.relativeAltitude as? Double
+        self.relativeAltitude = altitudeData?.relativeAltitude.doubleValue
+        self.relativePressure = altitudeData?.pressure.doubleValue
     }
 }

@@ -17,9 +17,9 @@ struct Gliding_In_FlightApp: App {
     var body: some Scene {
         WindowGroup {
             RequestLocationView()
-                .environmentObject(model.locationModel)
+//                .environmentObject(model.locationModel)
                 .environmentObject(model.navigationModel)
-                .environmentObject(model.barometricModel)
+//                .environmentObject(model.barometricModel)
                 .environmentObject(model.gliderStore)
         }
     }

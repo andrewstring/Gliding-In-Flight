@@ -19,10 +19,9 @@ class Model: ObservableObject {
     @Published var gliderStore: GliderStore
     
     init() {
-        self.locationModel = LocationModel(activityType: Config.Model.activityType)
+        self.locationModel = LocationModel(activityType: .automotiveNavigation)
         self.navigationModel = NavigationModel()
         self.barometricModel = BarometricModel()
-        
         self.gliderStore = GliderStore()
     }
 }

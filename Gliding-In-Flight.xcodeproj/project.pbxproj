@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490DB2D22B7A807500E86969 /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DB2D12B7A807500E86969 /* NavigationModel.swift */; };
+		490DB2D42B7A83EB00E86969 /* BarometricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DB2D32B7A83EB00E86969 /* BarometricModel.swift */; };
 		49196E662B7180A400574C5C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49196E652B7180A400574C5C /* Model.swift */; };
 		49196E682B718C6600574C5C /* IssueWithDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49196E672B718C6600574C5C /* IssueWithDataView.swift */; };
 		4922A8E82B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922A8E72B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift */; };
 		49260BBD2B6DAFA400CA644F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BBC2B6DAFA400CA644F /* LoginView.swift */; };
 		49260BC32B6DC2FD00CA644F /* ButtonSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BC22B6DC2FD00CA644F /* ButtonSubmit.swift */; };
 		49260BC52B6DD4C300CA644F /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BC42B6DD4C300CA644F /* RequestLocationView.swift */; };
-		49260BC82B6DD5B100CA644F /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BC72B6DD5B100CA644F /* LocationModel.swift */; };
+		49260BC82B6DD5B100CA644F /* LocationModelOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BC72B6DD5B100CA644F /* LocationModelOld.swift */; };
 		49260BCA2B6DDA5C00CA644F /* InvalidLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BC92B6DDA5C00CA644F /* InvalidLocationView.swift */; };
 		49260BCC2B6DDFD700CA644F /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BCB2B6DDFD700CA644F /* CreateAccountView.swift */; };
 		49260BCE2B6DDFFE00CA644F /* TextTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BCD2B6DDFFE00CA644F /* TextTitle.swift */; };
 		49260BD02B6DE07000CA644F /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49260BCF2B6DE07000CA644F /* TextFieldInput.swift */; };
 		49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49288E6B2B621A5300F6E6DF /* APIBase.swift */; };
 		4934BB2E2B70509D00F55BAE /* RouteStartStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2D2B70509D00F55BAE /* RouteStartStopView.swift */; };
-		4934BB302B705F4800F55BAE /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2F2B705F4800F55BAE /* NavigationModel.swift */; };
+		4934BB302B705F4800F55BAE /* NavigationModelOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2F2B705F4800F55BAE /* NavigationModelOld.swift */; };
 		494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494182B32B704B8500B49324 /* GlidingMapView.swift */; };
 		495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F432D2B6B3396008BB485 /* GliderStore.swift */; };
 		498ED6202B6E0842001984C6 /* ADSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498ED61F2B6E0842001984C6 /* ADSB.swift */; };
@@ -47,11 +49,12 @@
 		49B8B2A92B71B27400A40E3C /* GPSTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8B2A82B71B27400A40E3C /* GPSTesting.swift */; };
 		49C1C4E12B6AEC3A00B5F368 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E02B6AEC3A00B5F368 /* APIError.swift */; };
 		49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E22B6AF31100B5F368 /* Location.swift */; };
-		49C1C4E52B6AFDA600B5F368 /* ObjectGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */; };
 		49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */; };
 		49E655AD2B7096CC0001F74E /* AltitudeComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655AC2B7096CC0001F74E /* AltitudeComparison.swift */; };
-		49E655AF2B70974F0001F74E /* BarometricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655AE2B70974F0001F74E /* BarometricModel.swift */; };
+		49E655AF2B70974F0001F74E /* BarometricModelOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655AE2B70974F0001F74E /* BarometricModelOld.swift */; };
 		49E655B12B7098140001F74E /* RouteNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655B02B7098140001F74E /* RouteNavbarView.swift */; };
+		49F55F0B2B771FDD00E83304 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F55F0A2B771FDD00E83304 /* LocationModel.swift */; };
+		49F55F0D2B77210C00E83304 /* BarometricAltitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F55F0C2B77210C00E83304 /* BarometricAltitude.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490DB2D12B7A807500E86969 /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		490DB2D32B7A83EB00E86969 /* BarometricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricModel.swift; sourceTree = "<group>"; };
 		49196E652B7180A400574C5C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		49196E672B718C6600574C5C /* IssueWithDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueWithDataView.swift; sourceTree = "<group>"; };
 		4922A8E42B71B57800202483 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
@@ -80,14 +85,14 @@
 		49260BBC2B6DAFA400CA644F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49260BC22B6DC2FD00CA644F /* ButtonSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSubmit.swift; sourceTree = "<group>"; };
 		49260BC42B6DD4C300CA644F /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
-		49260BC72B6DD5B100CA644F /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		49260BC72B6DD5B100CA644F /* LocationModelOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModelOld.swift; sourceTree = "<group>"; };
 		49260BC92B6DDA5C00CA644F /* InvalidLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidLocationView.swift; sourceTree = "<group>"; };
 		49260BCB2B6DDFD700CA644F /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		49260BCD2B6DDFFE00CA644F /* TextTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTitle.swift; sourceTree = "<group>"; };
 		49260BCF2B6DE07000CA644F /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
 		49288E6B2B621A5300F6E6DF /* APIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBase.swift; sourceTree = "<group>"; };
 		4934BB2D2B70509D00F55BAE /* RouteStartStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStartStopView.swift; sourceTree = "<group>"; };
-		4934BB2F2B705F4800F55BAE /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		4934BB2F2B705F4800F55BAE /* NavigationModelOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModelOld.swift; sourceTree = "<group>"; };
 		494182B32B704B8500B49324 /* GlidingMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapView.swift; sourceTree = "<group>"; };
 		495F432D2B6B3396008BB485 /* GliderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GliderStore.swift; sourceTree = "<group>"; };
 		498ED61F2B6E0842001984C6 /* ADSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSB.swift; sourceTree = "<group>"; };
@@ -119,11 +124,12 @@
 		49BAE8E02B704C7B003B2020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49C1C4E02B6AEC3A00B5F368 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		49C1C4E22B6AF31100B5F368 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectGenerator.swift; sourceTree = "<group>"; };
 		49E34A2D2B60523900FF27CC /* OutdatedIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedIOS.swift; sourceTree = "<group>"; };
 		49E655AC2B7096CC0001F74E /* AltitudeComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeComparison.swift; sourceTree = "<group>"; };
-		49E655AE2B70974F0001F74E /* BarometricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricModel.swift; sourceTree = "<group>"; };
+		49E655AE2B70974F0001F74E /* BarometricModelOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricModelOld.swift; sourceTree = "<group>"; };
 		49E655B02B7098140001F74E /* RouteNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteNavbarView.swift; sourceTree = "<group>"; };
+		49F55F0A2B771FDD00E83304 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		49F55F0C2B77210C00E83304 /* BarometricAltitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricAltitude.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +179,11 @@
 		49260BC62B6DD5A300CA644F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				49F55F092B771FC000E83304 /* NewNavModels */,
 				499209312B69CF7900A9A2CD /* Data */,
-				49260BC72B6DD5B100CA644F /* LocationModel.swift */,
-				4934BB2F2B705F4800F55BAE /* NavigationModel.swift */,
-				49E655AE2B70974F0001F74E /* BarometricModel.swift */,
+				49260BC72B6DD5B100CA644F /* LocationModelOld.swift */,
+				4934BB2F2B705F4800F55BAE /* NavigationModelOld.swift */,
+				49E655AE2B70974F0001F74E /* BarometricModelOld.swift */,
 				49196E652B7180A400574C5C /* Model.swift */,
 			);
 			path = Model;
@@ -272,7 +279,7 @@
 				499209352B69CF9F00A9A2CD /* Thermal.swift */,
 				499209372B69CFA400A9A2CD /* Flight.swift */,
 				49C1C4E22B6AF31100B5F368 /* Location.swift */,
-				49C1C4E42B6AFDA600B5F368 /* ObjectGenerator.swift */,
+				49F55F0C2B77210C00E83304 /* BarometricAltitude.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -359,6 +366,16 @@
 				49B8B2A82B71B27400A40E3C /* GPSTesting.swift */,
 			);
 			path = Testing;
+			sourceTree = "<group>";
+		};
+		49F55F092B771FC000E83304 /* NewNavModels */ = {
+			isa = PBXGroup;
+			children = (
+				49F55F0A2B771FDD00E83304 /* LocationModel.swift */,
+				490DB2D12B7A807500E86969 /* NavigationModel.swift */,
+				490DB2D32B7A83EB00E86969 /* BarometricModel.swift */,
+			);
+			path = NewNavModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,11 +514,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */,
+				49F55F0D2B77210C00E83304 /* BarometricAltitude.swift in Sources */,
 				499209362B69CF9F00A9A2CD /* Thermal.swift in Sources */,
 				49A5E8002B68927B00B08107 /* APIFlight.swift in Sources */,
 				494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */,
 				49A5E8042B68940D00B08107 /* Config.swift in Sources */,
-				49260BC82B6DD5B100CA644F /* LocationModel.swift in Sources */,
+				49F55F0B2B771FDD00E83304 /* LocationModel.swift in Sources */,
+				49260BC82B6DD5B100CA644F /* LocationModelOld.swift in Sources */,
 				4934BB2E2B70509D00F55BAE /* RouteStartStopView.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
 				49260BD02B6DE07000CA644F /* TextFieldInput.swift in Sources */,
@@ -514,23 +533,24 @@
 				499658842B5DA75200ACCAF7 /* Gliding_In_Flight.xcdatamodeld in Sources */,
 				499209382B69CFA400A9A2CD /* Flight.swift in Sources */,
 				49C1C4E32B6AF31100B5F368 /* Location.swift in Sources */,
-				4934BB302B705F4800F55BAE /* NavigationModel.swift in Sources */,
+				4934BB302B705F4800F55BAE /* NavigationModelOld.swift in Sources */,
 				49962B3B2B6F57A7008FE6F7 /* GlidingMapViewRepresentable.swift in Sources */,
 				49E655B12B7098140001F74E /* RouteNavbarView.swift in Sources */,
 				49260BBD2B6DAFA400CA644F /* LoginView.swift in Sources */,
 				495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */,
-				49E655AF2B70974F0001F74E /* BarometricModel.swift in Sources */,
+				49E655AF2B70974F0001F74E /* BarometricModelOld.swift in Sources */,
 				49B8B2A92B71B27400A40E3C /* GPSTesting.swift in Sources */,
 				4992093D2B69E9AF00A9A2CD /* DateTime.swift in Sources */,
 				49B7F8B52B6C5B8300C2B6B1 /* FlightStore.swift in Sources */,
+				490DB2D42B7A83EB00E86969 /* BarometricModel.swift in Sources */,
 				49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */,
 				49260BCC2B6DDFD700CA644F /* CreateAccountView.swift in Sources */,
 				49196E662B7180A400574C5C /* Model.swift in Sources */,
+				490DB2D22B7A807500E86969 /* NavigationModel.swift in Sources */,
 				499C41D02B61DB0900FE42BA /* TESTER.swift in Sources */,
 				49E655AD2B7096CC0001F74E /* AltitudeComparison.swift in Sources */,
 				499658812B5DA75200ACCAF7 /* Persistence.swift in Sources */,
 				49260BCE2B6DDFFE00CA644F /* TextTitle.swift in Sources */,
-				49C1C4E52B6AFDA600B5F368 /* ObjectGenerator.swift in Sources */,
 				49196E682B718C6600574C5C /* IssueWithDataView.swift in Sources */,
 				49C1C4E12B6AEC3A00B5F368 /* APIError.swift in Sources */,
 				49260BCA2B6DDA5C00CA644F /* InvalidLocationView.swift in Sources */,

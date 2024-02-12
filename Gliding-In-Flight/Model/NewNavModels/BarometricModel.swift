@@ -15,6 +15,8 @@ class BarometricModel: ObservableObject {
     @Published var relativeAltitude: Double?
     @Published var relativePressure: Double?
     
+    var navigationModel: NavigationModel?
+    
     let operationQueue: OperationQueue
     let altimeter: CMAltimeter
     

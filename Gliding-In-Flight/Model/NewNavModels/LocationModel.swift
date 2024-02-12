@@ -12,39 +12,38 @@ class LocationModel: NSObject, ObservableObject {
     
     // Published Variable Declarations
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
-    @Published var previousLocation: CLLocation? = nil
     @Published var newLocation: CLLocation? = nil
     
     var navigationModel: NavigationModel?
     
     // Location Manager Declaration
     typealias CLLocationAccuracy = Double
-    var locationManager: CLLocationManager
+    var locationManager: CLLocationManager? = nil
     
     init(activityType: CLActivityType) {
         // Set Location Manager and Location Manager Configuration
         self.locationManager = CLLocationManager()
-        self.locationManager.activityType = activityType
+        self.locationManager?.activityType = activityType
         
         super.init()
         
-        self.locationManager.delegate = self
+        self.locationManager?.delegate = self
         // self.flight = navigationModel.self
     }
 }
 
 // Delegate for LocationModel
 extension LocationModel: CLLocationManagerDelegate {
-    func locationManagerDidChangeAuthorization() {
-        self.locationAuthorizationStatus = self.locationManager.authorizationStatus
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        guard let locationManagerUnwrapped = locationManager else { return }
+        self.locationAuthorizationStatus = locationManagerUnwrapped.authorizationStatus
         if(self.locationAuthorizationStatus != .authorizedAlways) {
-            self.locationManager.requestAlwaysAuthorization()
+            self.locationManager?.requestAlwaysAuthorization()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("Updated Location")
-        self.previousLocation = self.newLocation
         self.newLocation = self.getLatestLocation(locations)
         
         guard let location = self.newLocation else { print("Issue with new location"); return }

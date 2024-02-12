@@ -8,8 +8,6 @@
 import Foundation
 
 class Model: ObservableObject {
-    
-    
     // Navigation && GPS Models
     @Published var locationModel: LocationModel
     @Published var navigationModel: NavigationModel
@@ -20,8 +18,8 @@ class Model: ObservableObject {
     
     init() {
         self.locationModel = LocationModel(activityType: .automotiveNavigation)
-        self.navigationModel = NavigationModel()
         self.barometricModel = BarometricModel()
+        self.navigationModel = NavigationModel()
         self.gliderStore = GliderStore()
     }
 }

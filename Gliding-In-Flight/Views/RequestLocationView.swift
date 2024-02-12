@@ -10,11 +10,11 @@ import SwiftUI
 struct RequestLocationView: View {
 //    @StateObject var locationModel: LocationModel = LocationModel(activityType: .automotiveNavigation)
     
-    @EnvironmentObject var locationModel: LocationModel
+    @EnvironmentObject var model: Model
     
     
     var body: some View {
-        switch locationModel.locationAuthorizationStatus {
+        switch model.navigationModel.locationModel.locationAuthorizationStatus {
             case .authorizedAlways:
                 LoginView()
             case .authorizedWhenInUse:

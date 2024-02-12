@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateAccountView: View {
     
-    @EnvironmentObject var gliderStore: GliderStore
+    @EnvironmentObject var model: Model
     @State var id: String = ""
     @State var name: String = ""
     
@@ -21,12 +21,12 @@ struct CreateAccountView: View {
         
         let glider = Glider(id: id, name: name, currentLocation: nil, currentUpdate: nil, lastLocation: nil, lastUpdate: nil)
         Task {
-            try await gliderStore.gliderSave(glider: glider)
+            try await model.gliderStore.gliderSave(glider: glider)
         }
     }
     
     var body: some View {
-        if gliderStore.glider != nil {
+        if model.gliderStore.glider != nil {
             GlidingMapView()
         } else {
             VStack {

@@ -9,19 +9,19 @@ import SwiftUI
 import MapKit
 
 struct GlidingMapView: View {
-    @EnvironmentObject var gliderStore: GliderStore
-    @EnvironmentObject var navigationModel: NavigationModel
+    @EnvironmentObject var model: Model
+    
     var content: String?
     
     let glidingMapViewRepresentable: GlidingMapViewRepresentable = GlidingMapViewRepresentable()
     
     var body: some View {
-        if gliderStore.glider != nil {
+        if model.gliderStore.glider != nil {
             GeometryReader { geometry in
                 VStack {
                     RouteNavbarView()
                     ScrollView {
-                        Text(String(describing: navigationModel.flight ?? nil))
+                        Text(String(describing: model.navigationModel.flight ?? nil))
                             .lineLimit(nil)
                             .frame(width: geometry.size.width)
                     }

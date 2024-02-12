@@ -17,14 +17,21 @@ class NavigationModel: ObservableObject {
     @Published var mapState: MapState
     @Published var flight: Flight? = nil
     
-    let flightStore = FlightStore()
-    let locationModel: LocationModel
-    let barometricModel: BarometricModel
+    let flightStore: FlightStore
+    var locationModel: LocationModel
+    var barometricModel: BarometricModel
     
     init() {
         self.mapState = .preFlight
-        self.locationModel = LocationModel(activityType: .automotiveNavigation)
+        self.flightStore = FlightStore()
         self.barometricModel = BarometricModel()
+        self.locationModel = LocationModel(activityType: .automotiveNavigation)
+        initModels()
+    }
+    
+    func initModels() {
+        self.locationModel.navigationModel = self
+        self.barometricModel.navigationModel = self
     }
     
     func createFlight(glider: Glider) {
@@ -43,12 +50,22 @@ class NavigationModel: ObservableObject {
     }
     
     func startNavigation(glider: Glider) {
+        self.locationModel = LocationModel(activityType: .automotiveNavigation)
+        self.barometricModel = BarometricModel()
         self.mapState = MapState.inFlight
         self.createFlight(glider: glider)
-        if self.flight != nil {
-            locationModel.locationManager.startUpdatingLocation()
-            barometricModel.startAbsoluteAltitudeRecording()
-            barometricModel.startRelativeAltitudeRecording()
+        print("FLIGHT")
+        print(self.flight)
+    }
+    
+    func stopNavigation() async {
+        do {
+            self.mapState = MapState.postFlight
+            guard let flightUnwrapped = self.flight else { print("Issue unwrapping flight"); return }
+            try await self.flightStore.flightSave(flight: flightUnwrapped)
+            flight?.name = UUID().uuidString
+        } catch {
+            print("stopNavigation errored out")
         }
     }
 }

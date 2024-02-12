@@ -169,6 +169,7 @@
 		49260BBF2B6DC2D900CA644F /* StandardComponents */ = {
 			isa = PBXGroup;
 			children = (
+				499C41CF2B61DB0900FE42BA /* TESTER.swift */,
 				49260BC22B6DC2FD00CA644F /* ButtonSubmit.swift */,
 				49260BCD2B6DDFFE00CA644F /* TextTitle.swift */,
 				49260BCF2B6DE07000CA644F /* TextFieldInput.swift */,
@@ -209,7 +210,6 @@
 				498ED61C2B6DFB2E001984C6 /* BlockedViews */,
 				498ED61B2B6DFB12001984C6 /* ValidationViews */,
 				49260BBF2B6DC2D900CA644F /* StandardComponents */,
-				499C41CF2B61DB0900FE42BA /* TESTER.swift */,
 				49260BC42B6DD4C300CA644F /* RequestLocationView.swift */,
 			);
 			path = Views;

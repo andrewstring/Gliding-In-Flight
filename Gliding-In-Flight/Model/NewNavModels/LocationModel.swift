@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 
+@MainActor
 class LocationModel: NSObject, ObservableObject {
     
     // Published Variable Declarations
@@ -29,6 +30,7 @@ class LocationModel: NSObject, ObservableObject {
         
         self.locationManager?.delegate = self
         // self.flight = navigationModel.self
+        self.locationManager?.startUpdatingLocation()
     }
 }
 
@@ -43,7 +45,6 @@ extension LocationModel: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Updated Location")
         self.newLocation = self.getLatestLocation(locations)
         
         guard let location = self.newLocation else { print("Issue with new location"); return }
@@ -54,8 +55,6 @@ extension LocationModel: CLLocationManagerDelegate {
             latitude: location.coordinate.latitude,
             longitude: location.coordinate.longitude,
             altitude: location.altitude,
-            absoluteAltitude: nil,
-            relativeAltitude: nil,
             speed: location.speed
         )
         navModel.addNewLocationToFlight(newLocation: newLocation)

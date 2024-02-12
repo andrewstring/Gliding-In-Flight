@@ -12,12 +12,13 @@ import CoreLocation
 @main
 struct Gliding_In_FlightApp: App {
 //    let persistenceController = PersistenceController.shared
-    @StateObject var model: Model = Model()
+//    @StateObject var model: Model = Model()
+    @StateObject var navigationModel: NavigationModel = NavigationModel()
     
     var body: some Scene {
         WindowGroup {
             RequestLocationView()
-                .environmentObject(model)
+                .environmentObject(navigationModel)
         }
     }
 }

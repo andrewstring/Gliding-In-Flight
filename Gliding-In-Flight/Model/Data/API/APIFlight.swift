@@ -12,9 +12,9 @@ struct APIFlight {
 //        APIBase.getRequest(path: "/glider-tracking/flight?id=\(flightId)")
     }
     
-    static func addFlight() {
+    static func addFlight(flightData: Flight) {
 //        APIBase.postRequest(path: "/glider-tracking/flight")
-        APIBase.postRequest(path: "/glider-tracking/flight", responseType: FlightResponse.self, requestData: Flight.self as! Encodable)
+        APIBase.postRequest(path: "/glider-tracking/flight", responseType: FlightResponse.self, requestData: flightData)
     }
     
     static func updateFlight() {

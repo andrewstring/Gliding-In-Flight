@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		490DB2D22B7A807500E86969 /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DB2D12B7A807500E86969 /* NavigationModel.swift */; };
 		490DB2D42B7A83EB00E86969 /* BarometricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DB2D32B7A83EB00E86969 /* BarometricModel.swift */; };
+		490DB2D62B7ABA5A00E86969 /* RelativeBarometricAltitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DB2D52B7ABA5A00E86969 /* RelativeBarometricAltitude.swift */; };
 		49196E662B7180A400574C5C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49196E652B7180A400574C5C /* Model.swift */; };
 		49196E682B718C6600574C5C /* IssueWithDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49196E672B718C6600574C5C /* IssueWithDataView.swift */; };
 		4922A8E82B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922A8E72B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift */; };
@@ -54,7 +55,7 @@
 		49E655AF2B70974F0001F74E /* BarometricModelOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655AE2B70974F0001F74E /* BarometricModelOld.swift */; };
 		49E655B12B7098140001F74E /* RouteNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E655B02B7098140001F74E /* RouteNavbarView.swift */; };
 		49F55F0B2B771FDD00E83304 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F55F0A2B771FDD00E83304 /* LocationModel.swift */; };
-		49F55F0D2B77210C00E83304 /* BarometricAltitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F55F0C2B77210C00E83304 /* BarometricAltitude.swift */; };
+		49F55F0D2B77210C00E83304 /* AbsoluteBarometricAltitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F55F0C2B77210C00E83304 /* AbsoluteBarometricAltitude.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 /* Begin PBXFileReference section */
 		490DB2D12B7A807500E86969 /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
 		490DB2D32B7A83EB00E86969 /* BarometricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricModel.swift; sourceTree = "<group>"; };
+		490DB2D52B7ABA5A00E86969 /* RelativeBarometricAltitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeBarometricAltitude.swift; sourceTree = "<group>"; };
 		49196E652B7180A400574C5C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		49196E672B718C6600574C5C /* IssueWithDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueWithDataView.swift; sourceTree = "<group>"; };
 		4922A8E42B71B57800202483 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
@@ -129,7 +131,7 @@
 		49E655AE2B70974F0001F74E /* BarometricModelOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricModelOld.swift; sourceTree = "<group>"; };
 		49E655B02B7098140001F74E /* RouteNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteNavbarView.swift; sourceTree = "<group>"; };
 		49F55F0A2B771FDD00E83304 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
-		49F55F0C2B77210C00E83304 /* BarometricAltitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometricAltitude.swift; sourceTree = "<group>"; };
+		49F55F0C2B77210C00E83304 /* AbsoluteBarometricAltitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsoluteBarometricAltitude.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,7 +281,8 @@
 				499209352B69CF9F00A9A2CD /* Thermal.swift */,
 				499209372B69CFA400A9A2CD /* Flight.swift */,
 				49C1C4E22B6AF31100B5F368 /* Location.swift */,
-				49F55F0C2B77210C00E83304 /* BarometricAltitude.swift */,
+				49F55F0C2B77210C00E83304 /* AbsoluteBarometricAltitude.swift */,
+				490DB2D52B7ABA5A00E86969 /* RelativeBarometricAltitude.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -514,7 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E34A2E2B60523900FF27CC /* OutdatedIOS.swift in Sources */,
-				49F55F0D2B77210C00E83304 /* BarometricAltitude.swift in Sources */,
+				49F55F0D2B77210C00E83304 /* AbsoluteBarometricAltitude.swift in Sources */,
 				499209362B69CF9F00A9A2CD /* Thermal.swift in Sources */,
 				49A5E8002B68927B00B08107 /* APIFlight.swift in Sources */,
 				494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */,
@@ -545,6 +548,7 @@
 				490DB2D42B7A83EB00E86969 /* BarometricModel.swift in Sources */,
 				49288E6C2B621A5300F6E6DF /* APIBase.swift in Sources */,
 				49260BCC2B6DDFD700CA644F /* CreateAccountView.swift in Sources */,
+				490DB2D62B7ABA5A00E86969 /* RelativeBarometricAltitude.swift in Sources */,
 				49196E662B7180A400574C5C /* Model.swift in Sources */,
 				490DB2D22B7A807500E86969 /* NavigationModel.swift in Sources */,
 				499C41D02B61DB0900FE42BA /* TESTER.swift in Sources */,

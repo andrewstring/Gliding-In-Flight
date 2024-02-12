@@ -7,27 +7,29 @@
 
 import SwiftUI
 
-@MainActor
 struct RouteStartStopView: View {
     
-    @EnvironmentObject var model: Model
+//    @EnvironmentObject var model: Model
+    @EnvironmentObject var navigationModel: NavigationModel
     
     var flightStore = FlightStore()
     
     func startRoute() {
-        guard let glider = model.gliderStore.glider else { return }
-        model.navigationModel.startNavigation(glider: glider)
+        guard let glider = navigationModel.gliderStore.glider else { return }
+        navigationModel.startNavigation(glider: glider)
     }
     
     func stopRoute() {
         Task {
-            await model.navigationModel.stopNavigation()
+            await navigationModel.stopNavigation()
         }
     }
     
     func sendRoute() {
         Task {
             try await self.flightStore.flightsLoad()
+            guard let unwrappedFlight = self.navigationModel.flight else { return }
+            APIFlight.addFlight(flightData: unwrappedFlight)
         }
     }
     

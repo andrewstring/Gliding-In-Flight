@@ -31,7 +31,6 @@ class FlightStore: ObservableObject {
         }
     }
     
-    @MainActor
     func flightsLoad() async throws {
         let task = Task<Flight?, Error> {
             guard let flightURL = try? Self.flightURL() else { print("1"); return nil }
@@ -44,7 +43,6 @@ class FlightStore: ObservableObject {
         self.flight = try await task.value
     }
     
-    @MainActor
     func flightSave(flight: Flight) async throws -> Flight? {
         let task = Task<Flight?, Error> {
             guard let flightURL = try? Self.flightURL() else { return nil }
@@ -55,7 +53,6 @@ class FlightStore: ObservableObject {
         return try await task.value
     }
     
-    @MainActor
     func flightRemove() async throws -> Void {
         let task = Task<Void, Error> {
             guard let flightURL = try? Self.flightURL() else { return }

@@ -13,19 +13,16 @@ enum MapState {
     case postFlight
 }
 
+@MainActor
 class NavigationModel: ObservableObject {
-    @Published var mapState: MapState
+    @Published var mapState: MapState = .preFlight
     @Published var flight: Flight? = nil
-    
-    let flightStore: FlightStore
-    var locationModel: LocationModel
-    var barometricModel: BarometricModel
+    @Published var flightStore: FlightStore = FlightStore()
+    @Published var locationModel: LocationModel = LocationModel(activityType: .automotiveNavigation)
+    @Published var barometricModel: BarometricModel = BarometricModel()
+    @Published var gliderStore: GliderStore = GliderStore()
     
     init() {
-        self.mapState = .preFlight
-        self.flightStore = FlightStore()
-        self.barometricModel = BarometricModel()
-        self.locationModel = LocationModel(activityType: .automotiveNavigation)
         initModels()
     }
     
@@ -35,27 +32,30 @@ class NavigationModel: ObservableObject {
     }
     
     func createFlight(glider: Glider) {
+        print("CREATTEFLIGHT")
         self.flight = Flight(
             id: UUID().uuidString,
             name: "",
             glider: glider,
             dateOfFlight: DateTime.getDateTime().toString(),
             locations: [],
-            barometricAltitudes: []
+            absoluteBarometricAltitudes: [],
+            relativeBarometricAltitudes: []
         )
     }
     
     func addNewLocationToFlight(newLocation: Location) {
-        self.flight?.locations.append(newLocation)
+        print(self.mapState)
+        if self.mapState == .inFlight {
+            print("NEWLOCATION")
+            print(newLocation)
+            self.flight?.locations.append(newLocation)
+        }
     }
     
     func startNavigation(glider: Glider) {
-        self.locationModel = LocationModel(activityType: .automotiveNavigation)
-        self.barometricModel = BarometricModel()
         self.mapState = MapState.inFlight
         self.createFlight(glider: glider)
-        print("FLIGHT")
-        print(self.flight)
     }
     
     func stopNavigation() async {
@@ -63,7 +63,6 @@ class NavigationModel: ObservableObject {
             self.mapState = MapState.postFlight
             guard let flightUnwrapped = self.flight else { print("Issue unwrapping flight"); return }
             try await self.flightStore.flightSave(flight: flightUnwrapped)
-            flight?.name = UUID().uuidString
         } catch {
             print("stopNavigation errored out")
         }

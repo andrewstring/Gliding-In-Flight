@@ -12,8 +12,6 @@ struct Location: Codable {
     let latitude: Double
     let longitude: Double
     let altitude: Double?
-    let absoluteAltitude: Double?
-    let relativeAltitude: Double?
     let speed: Double?
 }
 

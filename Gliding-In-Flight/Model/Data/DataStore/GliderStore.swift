@@ -7,12 +7,13 @@
 
 import Foundation
 
+
 // Handles the persistent storage of the primary glider
 class GliderStore: ObservableObject {
     @Published var glider: Glider?
     
     init() {
-        Task {
+        let task = Task {
             try await self.gliderLoad()
         }
     }
@@ -33,7 +34,6 @@ class GliderStore: ObservableObject {
         }
     }
     
-    @MainActor
     func gliderLoad() async throws {
         let task = Task<Glider?, Error> {
             guard let gliderURL = try? Self.gliderURL() else { return nil }
@@ -44,7 +44,6 @@ class GliderStore: ObservableObject {
         self.glider = try? await task.value
     }
     
-    @MainActor
     func gliderSave(glider: Glider) async throws -> Glider? {
         let task = Task<Glider?, Error> {
             guard let gliderURL = try? Self.gliderURL() else { return nil }
@@ -56,7 +55,6 @@ class GliderStore: ObservableObject {
         return try await task.value
     }
     
-    @MainActor
     func gliderRemove() async throws -> Void {
         let task = Task<Void, Error> {
             guard let gliderURL = try? Self.gliderURL() else { return }

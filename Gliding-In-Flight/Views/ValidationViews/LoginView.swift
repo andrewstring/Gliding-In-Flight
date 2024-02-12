@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var username: String = ""
-    @EnvironmentObject var model: Model
+//    @EnvironmentObject var model: Model
+    @EnvironmentObject var navigationModel: NavigationModel
     
     
     private let signInButtonText = "SIGN IN"
@@ -23,7 +24,7 @@ struct LoginView: View {
     
     
     var body: some View {
-        if model.gliderStore.glider != nil {
+        if navigationModel.gliderStore.glider != nil {
             GlidingMapView()
         } else {
             NavigationStack {

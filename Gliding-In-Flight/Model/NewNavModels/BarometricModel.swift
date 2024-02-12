@@ -8,6 +8,7 @@
 import Foundation
 import CoreMotion
 
+@MainActor
 class BarometricModel: ObservableObject {
     @Published var absoluteAltitude: Double?
     @Published var absoluteAccuracy: Double?
@@ -41,6 +42,7 @@ class BarometricModel: ObservableObject {
         self.absoluteAltitude = absoluteAltitudeData?.altitude
         self.absoluteAccuracy = absoluteAltitudeData?.accuracy
         self.absolutePrecision = absoluteAltitudeData?.precision
+        self.navigationModel?.flight?.absoluteBarometricAltitudes.append(AbsoluteBarometricAltitude(date: DateTime.getDateTime().toString(), absoluteAltitude: self.absoluteAltitude, absoluteAccuracy: self.absoluteAccuracy, absolutePrecision: self.absolutePrecision))
     }
     
     func startRelativeAltitudeRecording() {
@@ -56,5 +58,6 @@ class BarometricModel: ObservableObject {
         }
         self.relativeAltitude = altitudeData?.relativeAltitude.doubleValue
         self.relativePressure = altitudeData?.pressure.doubleValue
+        self.navigationModel?.flight?.relativeBarometricAltitudes.append(RelativeBarometricAltitude(date: DateTime.getDateTime().toString(), relativeAltitude: self.relativeAltitude, relativePressure: self.relativePressure))
     }
 }

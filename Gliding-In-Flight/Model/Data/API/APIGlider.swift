@@ -21,9 +21,9 @@ struct APIGlider {
         let testGlider: Glider = Glider(
             id: "test\(num)",
             name: "test\(num)",
-            currentLocation: Location(date: DateTime.getDateTime().toString(), latitude: 1.0, longitude: 1.0, altitude: 1.0, absoluteAltitude: 1.0, relativeAltitude: 1.0, speed: 1.0),
+            currentLocation: Location(date: DateTime.getDateTime().toString(), latitude: 1.0, longitude: 1.0, altitude: 1.0, speed: 1.0),
             currentUpdate: DateTime.getDateTime().toString(),
-            lastLocation: Location(date: DateTime.getDateTime().toString(), latitude: 1.0, longitude: 1.0, altitude: 1.0, absoluteAltitude: 1.0, relativeAltitude: 1.0, speed: 1.0),
+            lastLocation: Location(date: DateTime.getDateTime().toString(), latitude: 1.0, longitude: 1.0, altitude: 1.0, speed: 1.0),
             lastUpdate: DateTime.getDateTime().toString()
         )
         APIBase.postRequest(path: "\(gliderRoute)", responseType: GliderResponse.self, requestData: testGlider)

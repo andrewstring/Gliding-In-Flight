@@ -26,7 +26,7 @@ struct GlidingMapView: View {
                                 .lineLimit(nil)
                                 .frame(width: geometry.size.width)
                         } else {
-                            Text("JKL")
+                            Text("Navigation Data will populate")
                         }
                     }
 //                    glidingMapViewRepresentable

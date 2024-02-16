@@ -13,6 +13,14 @@ struct Location: Codable {
     let longitude: Double
     let altitude: Double?
     let speed: Double?
+    
+    init(date: String, latitude: Double, longitude: Double, altitude: Double? = nil, speed: Double? = nil) {
+        self.date = date
+        self.latitude = latitude
+        self.longitude = longitude
+        self.altitude = altitude
+        self.speed = speed
+    }
 }
 
 struct LocationResponse: Decodable {

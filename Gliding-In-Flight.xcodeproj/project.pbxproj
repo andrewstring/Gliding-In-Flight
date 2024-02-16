@@ -26,6 +26,11 @@
 		4934BB302B705F4800F55BAE /* NavigationModelOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BB2F2B705F4800F55BAE /* NavigationModelOld.swift */; };
 		494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494182B32B704B8500B49324 /* GlidingMapView.swift */; };
 		495F432E2B6B3396008BB485 /* GliderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F432D2B6B3396008BB485 /* GliderStore.swift */; };
+		498BF85A2B7EAC2A0058847F /* GlidingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BF8592B7EAC2A0058847F /* GlidingMapViewController.swift */; };
+		498BF85C2B7EB78B0058847F /* ThermalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BF85B2B7EB78B0058847F /* ThermalAnnotation.swift */; };
+		498BF85F2B7EDC3B0058847F /* ThermalModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BF85E2B7EDC3B0058847F /* ThermalModalController.swift */; };
+		498BF8612B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BF8602B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift */; };
+		498BF8632B7F08CB0058847F /* ThermalModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498BF8622B7F08CB0058847F /* ThermalModal.storyboard */; };
 		498ED6202B6E0842001984C6 /* ADSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498ED61F2B6E0842001984C6 /* ADSB.swift */; };
 		498ED6222B6E08E0001984C6 /* adsb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 498ED6212B6E08E0001984C6 /* adsb.txt */; };
 		499209342B69CF9700A9A2CD /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209332B69CF9600A9A2CD /* Glider.swift */; };
@@ -97,6 +102,11 @@
 		4934BB2F2B705F4800F55BAE /* NavigationModelOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModelOld.swift; sourceTree = "<group>"; };
 		494182B32B704B8500B49324 /* GlidingMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapView.swift; sourceTree = "<group>"; };
 		495F432D2B6B3396008BB485 /* GliderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GliderStore.swift; sourceTree = "<group>"; };
+		498BF8592B7EAC2A0058847F /* GlidingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingMapViewController.swift; sourceTree = "<group>"; };
+		498BF85B2B7EB78B0058847F /* ThermalAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalAnnotation.swift; sourceTree = "<group>"; };
+		498BF85E2B7EDC3B0058847F /* ThermalModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalModalController.swift; sourceTree = "<group>"; };
+		498BF8602B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlidingMapViewController+Delegate.swift"; sourceTree = "<group>"; };
+		498BF8622B7F08CB0058847F /* ThermalModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThermalModal.storyboard; sourceTree = "<group>"; };
 		498ED61F2B6E0842001984C6 /* ADSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSB.swift; sourceTree = "<group>"; };
 		498ED6212B6E08E0001984C6 /* adsb.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = adsb.txt; sourceTree = "<group>"; };
 		499209332B69CF9600A9A2CD /* Glider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glider.swift; sourceTree = "<group>"; };
@@ -159,13 +169,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4922A8E62B71D7F300202483 /* MapRepresentables */ = {
+		4922A8E62B71D7F300202483 /* UIKit Bridge */ = {
 			isa = PBXGroup;
 			children = (
+				498BF85D2B7EDC2D0058847F /* Thermals */,
 				49962B3A2B6F57A7008FE6F7 /* GlidingMapViewRepresentable.swift */,
 				4922A8E72B71D87A00202483 /* GlidingMapViewControllerRepresentable.swift */,
+				498BF8592B7EAC2A0058847F /* GlidingMapViewController.swift */,
+				498BF8602B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift */,
 			);
-			path = MapRepresentables;
+			path = "UIKit Bridge";
 			sourceTree = "<group>";
 		};
 		49260BBF2B6DC2D900CA644F /* StandardComponents */ = {
@@ -183,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				49F55F092B771FC000E83304 /* NewNavModels */,
-				499209312B69CF7900A9A2CD /* Data */,
 				49260BC72B6DD5B100CA644F /* LocationModelOld.swift */,
 				4934BB2F2B705F4800F55BAE /* NavigationModelOld.swift */,
 				49E655AE2B70974F0001F74E /* BarometricModelOld.swift */,
@@ -208,6 +220,7 @@
 		494C51142B5EF8C10023E176 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4922A8E62B71D7F300202483 /* UIKit Bridge */,
 				498ED61D2B6DFB6D001984C6 /* GlidingViews */,
 				498ED61C2B6DFB2E001984C6 /* BlockedViews */,
 				498ED61B2B6DFB12001984C6 /* ValidationViews */,
@@ -220,10 +233,21 @@
 		495F432B2B6B3381008BB485 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				49288E6A2B621A3F00F6E6DF /* API */,
 				495F432D2B6B3396008BB485 /* GliderStore.swift */,
 				49B7F8B42B6C5B8300C2B6B1 /* FlightStore.swift */,
 			);
 			path = DataStore;
+			sourceTree = "<group>";
+		};
+		498BF85D2B7EDC2D0058847F /* Thermals */ = {
+			isa = PBXGroup;
+			children = (
+				498BF85B2B7EB78B0058847F /* ThermalAnnotation.swift */,
+				498BF85E2B7EDC3B0058847F /* ThermalModalController.swift */,
+				498BF8622B7F08CB0058847F /* ThermalModal.storyboard */,
+			);
+			path = Thermals;
 			sourceTree = "<group>";
 		};
 		498ED61B2B6DFB12001984C6 /* ValidationViews */ = {
@@ -262,16 +286,6 @@
 				498ED6212B6E08E0001984C6 /* adsb.txt */,
 			);
 			path = ADSB;
-			sourceTree = "<group>";
-		};
-		499209312B69CF7900A9A2CD /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				495F432B2B6B3381008BB485 /* DataStore */,
-				499209322B69CF8400A9A2CD /* DataTypes */,
-				49288E6A2B621A3F00F6E6DF /* API */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		499209322B69CF8400A9A2CD /* DataTypes */ = {
@@ -320,7 +334,8 @@
 		4996587D2B5DA75200ACCAF7 /* Gliding-In-Flight */ = {
 			isa = PBXGroup;
 			children = (
-				4922A8E62B71D7F300202483 /* MapRepresentables */,
+				499209322B69CF8400A9A2CD /* DataTypes */,
+				495F432B2B6B3381008BB485 /* DataStore */,
 				49E655AB2B7096BC0001F74E /* Testing */,
 				49BAE8E02B704C7B003B2020 /* Info.plist */,
 				49260BC62B6DD5A300CA644F /* Model */,
@@ -489,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498BF8632B7F08CB0058847F /* ThermalModal.storyboard in Resources */,
 				4996588C2B5DA75600ACCAF7 /* Preview Assets.xcassets in Resources */,
 				498ED6222B6E08E0001984C6 /* adsb.txt in Resources */,
 				499658882B5DA75600ACCAF7 /* Assets.xcassets in Resources */,
@@ -520,11 +536,15 @@
 				49F55F0D2B77210C00E83304 /* AbsoluteBarometricAltitude.swift in Sources */,
 				499209362B69CF9F00A9A2CD /* Thermal.swift in Sources */,
 				49A5E8002B68927B00B08107 /* APIFlight.swift in Sources */,
+				498BF85C2B7EB78B0058847F /* ThermalAnnotation.swift in Sources */,
+				498BF85A2B7EAC2A0058847F /* GlidingMapViewController.swift in Sources */,
 				494182B42B704B8500B49324 /* GlidingMapView.swift in Sources */,
+				498BF85F2B7EDC3B0058847F /* ThermalModalController.swift in Sources */,
 				49A5E8042B68940D00B08107 /* Config.swift in Sources */,
 				49F55F0B2B771FDD00E83304 /* LocationModel.swift in Sources */,
 				49260BC82B6DD5B100CA644F /* LocationModelOld.swift in Sources */,
 				4934BB2E2B70509D00F55BAE /* RouteStartStopView.swift in Sources */,
+				498BF8612B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift in Sources */,
 				4996587F2B5DA75200ACCAF7 /* Gliding_In_FlightApp.swift in Sources */,
 				49260BD02B6DE07000CA644F /* TextFieldInput.swift in Sources */,
 				499209342B69CF9700A9A2CD /* Glider.swift in Sources */,

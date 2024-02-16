@@ -11,7 +11,6 @@ import MapKit
 struct GlidingMapViewRepresentable: UIViewRepresentable {
     
     @EnvironmentObject var navigationModel: NavigationModel
-    @EnvironmentObject var locationModel: LocationModel
     let mapView: MKMapView
     let currentLocationAnnotation: MKAnnotation?
     
@@ -19,13 +18,27 @@ struct GlidingMapViewRepresentable: UIViewRepresentable {
         self.mapView = MKMapView()
         self.mapView.preferredConfiguration = MKImageryMapConfiguration()
         self.currentLocationAnnotation = nil
+        setMapView()
+    }
+    
+    func setMapView() {
+        switch self.navigationModel.mapState {
+        case .preFlight:
+            self.mapView.showsCompass = false
+        case .inFlight:
+            self.mapView.showsCompass = true
+        case .postFlight:
+            self.mapView.showsCompass = true
+        }
     }
     
     func makeUIView(context: Context) -> MKMapView {
-        if let centerCoordinate = locationModel.newLocation?.coordinate {
+        let compass = MKCompassButton()
+        compass.compassVisibility = .visible
+        self.mapView.addSubview(compass)
+        if let centerCoordinate = navigationModel.locationModel.newLocation?.coordinate {
             self.mapView.centerCoordinate = centerCoordinate
             self.mapView.showsUserLocation = true
-            self.mapView.addAnnotation(MKPointAnnotation(__coordinate: centerCoordinate, title: "jkl", subtitle: "jkl"))
         }
         switch navigationModel.mapState {
             case .preFlight:

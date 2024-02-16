@@ -13,24 +13,25 @@ struct GlidingMapView: View {
     
     var content: String?
     
-    let glidingMapViewRepresentable: GlidingMapViewRepresentable = GlidingMapViewRepresentable()
+//    let glidingMapViewRepresentable: GlidingMapViewRepresentable = GlidingMapViewRepresentable()
     
     var body: some View {
         if navigationModel.gliderStore.glider != nil {
             GeometryReader { geometry in
                 VStack {
                     RouteNavbarView()
-                    ScrollView {
-                        if let nav = navigationModel.flight {
-                            Text(String(describing: nav.representation))
-                                .lineLimit(nil)
-                                .frame(width: geometry.size.width)
-                        } else {
-                            Text("Navigation Data will populate")
-                        }
-                    }
+//                    ScrollView {
+//                        if let nav = navigationModel.flight {
+//                            Text(String(describing: nav.representation))
+//                                .lineLimit(nil)
+//                                .frame(width: geometry.size.width)
+//                        } else {
+//                            Text("Navigation Data will populate")
+//                        }
+//                    }
 //                    glidingMapViewRepresentable
 //                        .fixedSize(horizontal: false, vertical: false)
+                    GlidingMapViewControllerRepresentable()
                     RouteStartStopView()
                 }
             }

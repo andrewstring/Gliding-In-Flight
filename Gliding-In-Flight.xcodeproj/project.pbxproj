@@ -30,7 +30,6 @@
 		498BF85C2B7EB78B0058847F /* ThermalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BF85B2B7EB78B0058847F /* ThermalAnnotation.swift */; };
 		498BF85F2B7EDC3B0058847F /* ThermalModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BF85E2B7EDC3B0058847F /* ThermalModalController.swift */; };
 		498BF8612B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BF8602B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift */; };
-		498BF8632B7F08CB0058847F /* ThermalModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498BF8622B7F08CB0058847F /* ThermalModal.storyboard */; };
 		498ED6202B6E0842001984C6 /* ADSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498ED61F2B6E0842001984C6 /* ADSB.swift */; };
 		498ED6222B6E08E0001984C6 /* adsb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 498ED6212B6E08E0001984C6 /* adsb.txt */; };
 		499209342B69CF9700A9A2CD /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499209332B69CF9600A9A2CD /* Glider.swift */; };
@@ -106,7 +105,6 @@
 		498BF85B2B7EB78B0058847F /* ThermalAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalAnnotation.swift; sourceTree = "<group>"; };
 		498BF85E2B7EDC3B0058847F /* ThermalModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalModalController.swift; sourceTree = "<group>"; };
 		498BF8602B7EE2EC0058847F /* GlidingMapViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlidingMapViewController+Delegate.swift"; sourceTree = "<group>"; };
-		498BF8622B7F08CB0058847F /* ThermalModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThermalModal.storyboard; sourceTree = "<group>"; };
 		498ED61F2B6E0842001984C6 /* ADSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSB.swift; sourceTree = "<group>"; };
 		498ED6212B6E08E0001984C6 /* adsb.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = adsb.txt; sourceTree = "<group>"; };
 		499209332B69CF9600A9A2CD /* Glider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glider.swift; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 			children = (
 				498BF85B2B7EB78B0058847F /* ThermalAnnotation.swift */,
 				498BF85E2B7EDC3B0058847F /* ThermalModalController.swift */,
-				498BF8622B7F08CB0058847F /* ThermalModal.storyboard */,
 			);
 			path = Thermals;
 			sourceTree = "<group>";
@@ -504,7 +501,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				498BF8632B7F08CB0058847F /* ThermalModal.storyboard in Resources */,
 				4996588C2B5DA75600ACCAF7 /* Preview Assets.xcassets in Resources */,
 				498ED6222B6E08E0001984C6 /* adsb.txt in Resources */,
 				499658882B5DA75600ACCAF7 /* Assets.xcassets in Resources */,

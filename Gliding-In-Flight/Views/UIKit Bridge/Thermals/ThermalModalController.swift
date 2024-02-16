@@ -10,16 +10,13 @@ import UIKit
 
 // I dont know if i ned this
 class ThermalModalController: UIViewController {
-    let parentView: UIView
     let thermal: Thermal
     
-    init(parentView: UIView, thermal: Thermal) {
-        self.parentView = parentView
+    init(thermal: Thermal) {
         self.thermal = thermal
         
         super.init(nibName: nil, bundle: nil)
         self.modalPresentationStyle = .pageSheet
-        
     }
     
     required init?(coder: NSCoder) {
@@ -27,13 +24,15 @@ class ThermalModalController: UIViewController {
     }
     
     override func viewDidLoad() {
-        self.view = generateModalView(parentView: self.parentView)
+        self.view = generateModalView()
     }
 }
 
 extension ThermalModalController {
     
-    func generateModalView(parentView: UIView) -> UIStackView {
+    func generateModalView() -> UIView {
+        let modalView = UIView()
+        
         var title = UILabel()
         title.text = "JKLJKL"
         title.backgroundColor = .red
@@ -43,22 +42,21 @@ extension ThermalModalController {
         titleOne.backgroundColor = .blue
         
         var modalStack: UIStackView {
-            
-            
             var modalStack = UIStackView()
-            
-            var modalFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height * 0.5)
-            modalStack.frame = modalFrame
-            
             modalStack.axis = .vertical
-            modalStack.alignment = .center
+            
             
             modalStack.addArrangedSubview(title)
             modalStack.addArrangedSubview(titleOne)
             modalStack.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
             return modalStack
         }
-        return modalStack
-        
+        modalView.addSubview(modalStack)
+        return modalView
     }
+}
+
+
+class ThermalModel: UIStackView {
+    
 }

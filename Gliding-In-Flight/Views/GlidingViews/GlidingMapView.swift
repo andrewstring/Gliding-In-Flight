@@ -20,17 +20,6 @@ struct GlidingMapView: View {
             GeometryReader { geometry in
                 VStack {
                     RouteNavbarView()
-//                    ScrollView {
-//                        if let nav = navigationModel.flight {
-//                            Text(String(describing: nav.representation))
-//                                .lineLimit(nil)
-//                                .frame(width: geometry.size.width)
-//                        } else {
-//                            Text("Navigation Data will populate")
-//                        }
-//                    }
-//                    glidingMapViewRepresentable
-//                        .fixedSize(horizontal: false, vertical: false)
                     GlidingMapViewControllerRepresentable()
                     RouteStartStopView()
                 }

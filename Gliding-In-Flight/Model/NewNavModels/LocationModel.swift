@@ -13,7 +13,7 @@ class LocationModel: NSObject, ObservableObject {
     
     // Published Variable Declarations
     @Published var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
-    @Published var newLocation: CLLocation? = nil
+    @Published var currentLocation: CLLocation? = nil
     
     var navigationModel: NavigationModel?
     
@@ -29,7 +29,6 @@ class LocationModel: NSObject, ObservableObject {
         super.init()
         
         self.locationManager?.delegate = self
-        // self.flight = navigationModel.self
         self.locationManager?.startUpdatingLocation()
     }
 }
@@ -45,17 +44,26 @@ extension LocationModel: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.newLocation = self.getLatestLocation(locations)
         
-        guard let location = self.newLocation else { print("Issue with new location"); return }
         guard let navModel = self.navigationModel else { print("Issue with navigation model"); return }
+        
+        
+        guard let latestLocation = self.getLatestLocation(locations) else { return }
+        self.currentLocation = latestLocation
+        
+        
+        if navModel.mapState != .inFlight { return }
+        guard let unwrappedCurrentLocation = self.currentLocation else { return }
+        if !isSignificantDistance(from: unwrappedCurrentLocation, to: latestLocation, threshold: 10.0) {
+            return
+        }
         
         let newLocation = Location(
             date: DateTime.getDateTime().toString(),
-            latitude: location.coordinate.latitude,
-            longitude: location.coordinate.longitude,
-            altitude: location.altitude,
-            speed: location.speed
+            latitude: unwrappedCurrentLocation.coordinate.latitude,
+            longitude: unwrappedCurrentLocation.coordinate.longitude,
+            altitude: unwrappedCurrentLocation.altitude,
+            speed: unwrappedCurrentLocation.speed
         )
         navModel.addNewLocationToFlight(newLocation: newLocation)
     }
@@ -65,5 +73,13 @@ extension LocationModel: CLLocationManagerDelegate {
             return nil
         }
         return locations[locations.count - 1]
+    }
+}
+
+// Helper Functions for Location Management
+extension LocationModel {
+    func isSignificantDistance(from: CLLocation, to: CLLocation, threshold: CLLocationDistance) -> Bool {
+        let distance = to.distance(from: from)
+        return distance > threshold
     }
 }

@@ -19,6 +19,7 @@ struct GlidingMapViewControllerRepresentable: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: GlidingMapViewController, context: Context) {
+        uiViewController.mapState = navigationModel.mapState
         return
     }
     

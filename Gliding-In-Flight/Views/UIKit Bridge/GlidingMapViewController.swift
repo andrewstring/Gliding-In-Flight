@@ -14,6 +14,19 @@ class GlidingMapViewController: UIViewController {
     let imageryMapConfig = MKImageryMapConfiguration()
     var mapView = MKMapView()
     
+    var mapState: MapState = .preFlight {
+        didSet {
+            switch mapState {
+            case .preFlight:
+                setPreFlight()
+            case .inFlight:
+                setInFlight()
+            case .postFlight:
+                setPostFlight()
+            }
+        }
+    }
+    
     var thermals: [Thermal] = []
     
     var navigationModel: NavigationModel
@@ -36,11 +49,24 @@ class GlidingMapViewController: UIViewController {
     }
     
     func setLocation() {
-        guard let location = navigationModel.locationModel.newLocation else { return }
+        addThermalAnnotations(thermals: [Self.thermal, Self.thermalOne])
+        
+        guard let location = navigationModel.locationModel.currentLocation else { return }
         mapView.setCenter(location.coordinate, animated: true)
         
         // FOR DEBUGGING
-        addThermalAnnotations(thermals: [Self.thermal])
+    }
+    
+    func setPreFlight() {
+        
+    }
+    
+    func setInFlight() {
+        
+    }
+    
+    func setPostFlight() {
+        
     }
 }
 
@@ -80,8 +106,14 @@ extension GlidingMapViewController {
 extension GlidingMapViewController {
     static let thermal = Thermal(
         id: "JKL",
-        location: Location(date: "JKL", latitude: 37.1, longitude: -122.600),
+        location: Location(date: "JKL", latitude: 37.1, longitude: -122.600, altitude: 37.0),
         glider: Glider(id: "jKL", name: "lll"),
+        detectedOn: "JKL"
+    )
+    static let thermalOne = Thermal(
+        id: "ONE",
+        location: Location(date: "ONE", latitude: 30.1, longitude: -102.600, altitude: 36.0),
+        glider: Glider(id: "BBB", name: "BBB"),
         detectedOn: "JKL"
     )
 }

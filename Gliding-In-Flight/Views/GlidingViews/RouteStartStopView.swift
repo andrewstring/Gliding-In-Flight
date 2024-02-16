@@ -47,11 +47,16 @@ struct RouteStartStopView: View {
         VStack {
             HStack {
                 Spacer()
-                self.startStopButton( "Start\nFlight", action: self.startRoute)
-                Spacer()
-                self.startStopButton("Stop\nFlight", action: self.stopRoute)
-                Spacer()
-                self.startStopButton( "Send\nFlight", action: self.sendRoute)
+                switch self.navigationModel.mapState {
+                case .preFlight:
+                    self.startStopButton("Start\nFlight", action: self.startRoute)
+                case .inFlight:
+                    self.startStopButton("Stop\nFlight", action: self.stopRoute)
+                case .postFlight:
+                    self.startStopButton("Send\nFlight", action: self.sendRoute)
+                    Spacer()
+                    self.startStopButton("Restart\nFlight", action: self.startRoute)
+                }
                 Spacer()
             }
             .frame(maxWidth: .infinity)

@@ -47,9 +47,11 @@ class NavigationModel: ObservableObject {
     func addNewLocationToFlight(newLocation: Location) {
         print(self.mapState)
         if self.mapState == .inFlight {
-            print("NEWLOCATION")
-            print(newLocation)
-            self.flight?.locations.append(newLocation)
+            guard let flight = self.flight else { return }
+            flight.locations.append(newLocation)
+            Task {
+                try await flightStore.flightSave(flight: flight)
+            }
         }
     }
     

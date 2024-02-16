@@ -36,7 +36,7 @@ struct GlidingMapViewRepresentable: UIViewRepresentable {
         let compass = MKCompassButton()
         compass.compassVisibility = .visible
         self.mapView.addSubview(compass)
-        if let centerCoordinate = navigationModel.locationModel.newLocation?.coordinate {
+        if let centerCoordinate = navigationModel.locationModel.currentLocation?.coordinate {
             self.mapView.centerCoordinate = centerCoordinate
             self.mapView.showsUserLocation = true
         }

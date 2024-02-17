@@ -20,32 +20,32 @@ struct RouteCreator {
     static var locationsToAdd: [Location] = [
         Location(
             date: "___",
-            latitude: -113.072036,
-            longitude: 42.857467,
-            altitude: 10.0,
-            speed: 10.0
+            latitude: 39.26,
+            longitude: -84.33,
+            altitude: 0.0,
+            speed: 0.0
         ),
         Location(
             date: "___",
-            latitude: -110.208836,
-            longitude: 46.930345,
-            altitude: 10.0,
-            speed: 10.0
+            latitude: 39.28,
+            longitude: -84.28,
+            altitude: 0.0,
+            speed: 0.0
         ),
         Location(
             date: "___",
-            latitude: -105.096163,
-            longitude: 48.132830,
-            altitude: 10.0,
-            speed: 10.0
+            latitude: 39.30,
+            longitude: -84.26,
+            altitude: 0.0,
+            speed: 0.0
         ),
         Location(
             date: "___",
-            latitude: -102.041016,
-            longitude: 47.179358,
-            altitude: 10.0,
-            speed: 10.0
-        ),
+            latitude: 39.31,
+            longitude: -84.22,
+            altitude: 0.0,
+            speed: 0.0
+        )
     ]
     
 }

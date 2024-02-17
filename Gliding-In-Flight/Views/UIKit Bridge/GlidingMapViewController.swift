@@ -86,11 +86,11 @@ class GlidingMapViewController: UIViewController {
         self.mapView.setRegion(region, animated: true)
         
         guard let flight = self.navigationModel.flight else { return }
-        print("LOCATIONSSSS")
-        print(flight.locations)
         self.mapView.addOverlay(
             RouteOverview.generateRouteOverview(locations: flight.locations),
             level: .aboveLabels)
+        print("LOCATIONSSSS")
+        print(flight.locations[0].coordLocation)
         self.mapView.setCenter(flight.locations[0].coordLocation, animated: true)
     }
 }

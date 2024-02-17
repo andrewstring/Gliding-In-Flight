@@ -58,6 +58,8 @@ class NavigationModel: ObservableObject {
     func startNavigation(glider: Glider) {
         self.mapState = MapState.inFlight
         self.createFlight(glider: glider)
+        
+        
     }
     
     func stopNavigation() async {

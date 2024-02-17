@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Location: Codable {
     let date: String
@@ -13,6 +14,13 @@ struct Location: Codable {
     let longitude: Double
     let altitude: Double?
     let speed: Double?
+    
+    var coordLocation: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(
+            latitude: latitude,
+            longitude: longitude
+        )
+    }
     
     init(date: String, latitude: Double, longitude: Double, altitude: Double? = nil, speed: Double? = nil) {
         self.date = date

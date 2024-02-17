@@ -58,21 +58,46 @@ class GlidingMapViewController: UIViewController {
     }
     
     func setPreFlight() {
-        
+       print("ENTERED PRE")
+        guard let location = navigationModel.locationModel.currentLocation else { return }
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 10000.0, longitudinalMeters: 10000.0)
+        self.mapView.showsCompass = false
+        self.mapView.setRegion(region, animated: true)
     }
     
     func setInFlight() {
+       print("ENTERED IN")
+        guard let location = navigationModel.locationModel.currentLocation else { return }
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 3000.0, longitudinalMeters: 3000.0)
+        self.mapView.showsCompass = true
+        self.mapView.setRegion(region, animated: true)
         
+        
+        
+        // TESTING PURPOSES
+        RouteCreator.TESTINGCreateRoute(navModel: self.navigationModel)
     }
     
     func setPostFlight() {
+       print("ENTERED POST")
+        guard let location = navigationModel.locationModel.currentLocation else { return }
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 6000.0, longitudinalMeters: 6000.0)
+        self.mapView.showsCompass = false
+        self.mapView.setRegion(region, animated: true)
         
+        guard let flight = self.navigationModel.flight else { return }
+        print("LOCATIONSSSS")
+        print(flight.locations)
+        self.mapView.addOverlay(
+            RouteOverview.generateRouteOverview(locations: flight.locations),
+            level: .aboveLabels)
+        self.mapView.setCenter(flight.locations[0].coordLocation, animated: true)
     }
 }
 
 
 
-// Annotation Adding/Removing
+// Thermal Annotation Adding/Removing
 extension GlidingMapViewController {
     func addThermalAnnotations(thermals: [Thermal]) {
         self.thermals.append(contentsOf: thermals)
@@ -101,6 +126,13 @@ extension GlidingMapViewController {
         self.mapView.removeAnnotations(annotationsToRemove)
     }
 }
+
+// Route Overview Generation
+//extension GlidingMapViewController {
+//    func generateRouteOverview(locations: [Location]) {
+//        self.mapView.addOverlay(, level: <#T##MKOverlayLevel#>)
+//    }
+//}
 
 // FOR DEBUGGING
 extension GlidingMapViewController {

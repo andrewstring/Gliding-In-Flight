@@ -33,6 +33,10 @@ struct RouteStartStopView: View {
         }
     }
     
+    func restartRoute() {
+        navigationModel.mapState = .preFlight
+    }
+    
     func startStopButton(_ text: String, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(text)
@@ -55,7 +59,7 @@ struct RouteStartStopView: View {
                 case .postFlight:
                     self.startStopButton("Send\nFlight", action: self.sendRoute)
                     Spacer()
-                    self.startStopButton("Restart\nFlight", action: self.startRoute)
+                    self.startStopButton("Restart\nFlight", action: self.restartRoute)
                 }
                 Spacer()
             }
